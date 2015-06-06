@@ -22,6 +22,40 @@
 - 报名的志愿者会在各种渠道看到宣传信息，手机报名者很多，所以需要兼容移动端展示，并考虑特别古老的手机。
 - 报名的志愿者使用的PC端浏览器需要兼容8-，样式可部分牺牲，功能保证可用。
 
+### 目录结构
+
+```
+├── LICENSE
+├── README.md
+├── conf                    服务器软件配置目录
+├── docs                    项目相关文档目录
+├── logs                    项目日志目录
+└── public                  项目目录
+    ├── aef-404.php             默认404页面
+    ├── aef-config.php          配置文件
+    ├── aef-content             资源目录
+    │   └── theme               模板目录
+    ├── aef-include             程序目录
+    │   ├── app.class.php           主要功能
+    │   ├── core.class.php          核心函数库
+    │   ├── debug.class.php         调试函数库
+    │   ├── index.class.php         首页页面
+    │   ├── join.class.php          报名页面
+    │   ├── route.class.php         路由管理
+    │   ├── safe.class.php          安全检查函数库
+    │   └── template.class.php      模板函数
+    ├── aef-load.php            加载器
+    ├── error-forbidden.php     禁止访问提示页面
+    ├── extra
+    │   ├── css
+    │   ├── img
+    │   └── js
+    ├── favicon.ico
+    ├── images
+    │   └── logo.gif
+    └── index.php             程序入口文件
+```
+
 
 ### 组织简介
 
