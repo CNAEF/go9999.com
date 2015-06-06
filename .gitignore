@@ -1,6 +1,9 @@
 .idea/
 *.iml
 node_modules/
+bower_components/
+logs/
+!logs/README.md
 
 .DS_Store
 *.db
@@ -8,3 +11,35 @@ node_modules/
 *.tmp
 *.cmd
 ~*
+
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+results
+
+npm-debug.log
+.bowerrc
+*.sublime-*
+projectFilesBackup
+
+# vim-related
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+.vimrc
+*~
+
+.build
+.dist
+.tmp
+
+thumb.db
+Thumb.db
