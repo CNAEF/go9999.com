@@ -29,7 +29,7 @@ class App extends Safe
     /**
      * 初始化路由
      *
-     * @since  0.0.1
+     * @since  1.0.1
      * @notice 主要的路径下，尽可能囊括更多的选择，诸如/join/?123
      */
     private function init_route()
@@ -37,6 +37,8 @@ class App extends Safe
         route::register('/', 'index');
         route::register('/index.php', 'index');
         route::register('/\?.*', 'index', true);
+        route::register('/index.php\?.*', 'index', true);
+
 
         route::register('/join', 'join');
         route::register('/join\?.*', 'join', true);
@@ -83,6 +85,18 @@ class App extends Safe
         new Route();
     }
 
+    /**
+     * 网站首页
+     *
+     * @since 1.0.1
+     *
+     * @return bool
+     */
+    public function index()
+    {
+        return new Index(['header' => self::get_page_meta('index')]);
+    }
+
     public function hi_cat()
     {
         echo 'hi-cat';
@@ -95,12 +109,6 @@ class App extends Safe
         echo '404';
     }
 
-    public function index()
-    {
-        echo 'index';
-
-        return true;
-    }
 
     public function join()
     {
@@ -147,6 +155,8 @@ class App extends Safe
     /**
      * 根据路由名称获得页面META数据
      *
+     * @since 1.0.1
+     *
      * @param $route
      *
      * @return mixed
@@ -158,39 +168,42 @@ class App extends Safe
         $desc_prefix = '中国•支教联盟(CNAEF)，';
 
         switch ($route) {
-            case 'LINKS':
-                $PAGE['TITLE'] = '友情链接' . $title_append;
-                $PAGE['KEYWORD'] = $default_keyword;
-                $PAGE['DESC'] = $desc_prefix . '友情链接页面。';
-                $PAGE['MODULE'] = 'links';
+            case 'links':
+                $data['TITLE'] = '友情链接' . $title_append;
+                $data['KEYWORD'] = $default_keyword;
+                $data['DESC'] = $desc_prefix . '友情链接页面。';
+                $data['MODULE'] = 'links';
                 break;
-            case 'CONTACT':
-                $PAGE['TITLE'] = '留言墙' . $title_append;
-                $PAGE['KEYWORD'] = $default_keyword;
-                $PAGE['DESC'] = $desc_prefix . '留言墙页面。';
-                $PAGE['MODULE'] = 'contact';
+            case 'contact':
+                $data['TITLE'] = '留言墙' . $title_append;
+                $data['KEYWORD'] = $default_keyword;
+                $data['DESC'] = $desc_prefix . '留言墙页面。';
+                $data['MODULE'] = 'contact';
                 break;
-            case 'ABOUT':
-                $PAGE['TITLE'] = '关于我们' . $title_append;
-                $PAGE['KEYWORD'] = $default_keyword;
-                $PAGE['DESC'] = $desc_prefix . '创办于2006年4月。自成立以来，长期致力于为发达地区爱心咨询寻找资助对象，为欠发达地区教育引入社会各界力量。';
-                $PAGE['MODULE'] = 'about';
+            case 'about':
+                $data['TITLE'] = '关于我们' . $title_append;
+                $data['KEYWORD'] = $default_keyword;
+                $data['DESC'] = $desc_prefix . '创办于2006年4月。自成立以来，长期致力于为发达地区爱心咨询寻找资助对象，为欠发达地区教育引入社会各界力量。';
+                $data['MODULE'] = 'about';
                 break;
-            case 'JOIN':
-                $PAGE['TITLE'] = '志愿者招募' . $title_append;
-                $PAGE['KEYWORD'] = $default_keyword;
-                $PAGE['DESC'] = $desc_prefix . '志愿者招募申请地址，我们期待你的加入。';
-                $PAGE['MODULE'] = 'join';
+            case 'join':
+                $data['TITLE'] = '志愿者招募' . $title_append;
+                $data['KEYWORD'] = $default_keyword;
+                $data['DESC'] = $desc_prefix . '志愿者招募申请地址，我们期待你的加入。';
+                $data['MODULE'] = 'join';
                 break;
             default:
-                $PAGE['TITLE'] = C_SITE_NAME;
-                $PAGE['KEYWORD'] = $default_keyword;
-                $PAGE['DESC'] = $desc_prefix . '创办于2006年4月。自成立以来，长期致力于为发达地区爱心咨询寻找资助对象，为欠发达地区教育引入社会各界力量。';
-                $PAGE['MODULE'] = 'index';
+                $data['TITLE'] = C_SITE_NAME;
+                $data['KEYWORD'] = $default_keyword;
+                $data['DESC'] = $desc_prefix . '创办于2006年4月。自成立以来，长期致力于为发达地区爱心咨询寻找资助对象，为欠发达地区教育引入社会各界力量。';
+                $data['MODULE'] = 'index';
                 break;
         }
 
-        return $PAGE;
+        $data['PAGE_CHARSET'] = C_CHARSET;
+        $data['PAGE_LANG'] = C_LANG;
+
+        return $data;
     }
 
 }

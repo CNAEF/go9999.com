@@ -2,7 +2,8 @@
 *.iml
 node_modules/
 bower_components/
-logs/
+public/aef-content/theme/default_cache
+logs/*
 !logs/README.md
 
 .DS_Store

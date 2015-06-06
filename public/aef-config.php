@@ -13,6 +13,8 @@
 
 if (!defined('FILE_PREFIX')) include "error-forbidden.php";
 
+date_default_timezone_set('PRC');
+
 /** 程序版本 */
 define("VERSION", "1.0.1");
 /** 调试模式开关 */

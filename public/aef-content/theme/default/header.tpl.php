@@ -1,11 +1,11 @@
-<?php if (!defined('FILE_PREFIX')) include "../../../error-forbidden.php"; ?>
-
+<?php if (!defined('FILE_PREFIX')) include '../../../error-forbidden.php'; ?>
 <!doctype html>
-<html lang="en-US">
+<html lang="{$PAGE_LANG}">
 <head>
-    <meta charset="UTF-8">
-    <title><?=$PAGE['TITLE'];?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="{$PAGE_CHARSET}"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{$TITLE}</title>
     <!--
     至看到这段文字的你：
     Hi~
@@ -15,11 +15,11 @@
                                                                     @soulteary
                                                                     2013/07/20
     -->
-    <meta name="keywords" content="<?=$PAGE['KEYWORD'];?>">
-    <meta name="description" content="<?=$PAGE['DESC'];?>">
-    <meta name="author" content="soulteary inspire by Thomas Park">
+    <meta name="keywords" content="{$KEYWORD}"/>
+    <meta name="description" content="{$DESC}"/>
+    <meta name="author" content="soulteary inspire by Thomas Park"/>
     <link rel="stylesheet" href="http://www.go9999.com/extra/css/packed.min.css?v=1107"/>
-    <meta property="wb:webmaster" content="c6eb3350438219e9" />
+    <meta property="wb:webmaster" content="c6eb3350438219e9"/>
     <!--[if lt IE 9]>
     <script src="http://www.go9999.com/extra/js/html5.js"></script>
     <![endif]-->

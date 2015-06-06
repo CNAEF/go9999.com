@@ -1,5 +1,4 @@
-<?php if (!defined('FILE_PREFIX')) include "../../../error-forbidden.php"; ?>
-
+<?php if (!defined('FILE_PREFIX')) include '../../../error-forbidden.php'; ?>
 <section id="apply-form-box">
     <div class="page-header">
         <h1>联盟留言墙</h1>

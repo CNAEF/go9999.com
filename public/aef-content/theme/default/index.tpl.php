@@ -1,41 +1,44 @@
-<?php if (!defined('FILE_PREFIX')) include "../../../error-forbidden.php"; ?>
-
+<?php if (!defined('FILE_PREFIX')) include '../../../error-forbidden.php'; ?>
 <header class="jumbotron subhead" id="overview">
     <div class="row">
         <div class="span6">
             <h1>中国·支教联盟</h1>
-            <?php if(date('m')>10):?>
-            <p class="lead"><?=date('Y')+1;?>年度支教志愿者招募</p>
-            <?php else:?>
-            <p class="lead"><?=date('Y');?>年度支教志愿者招募</p>
-            <?php endif;?>
+            <?php if (date('m') > 10): ?>
+                <p class="lead"><?= date('Y') + 1; ?>年度支教志愿者招募</p>
+            <?php else: ?>
+                <p class="lead"><?= date('Y'); ?>年度支教志愿者招募</p>
+            <?php endif; ?>
         </div>
         <div class="span6">
             <div class="well" style="padding: 25px 25px 15px 25px;">
                 <a href="http://www.go9999.com" style="display: block;">
                   <span style="float: left; margin: 0 15px 10px 0;display: block;">
-                      <img src="extra/img/logo-175x135.gif" alt="中国支教联盟"id="logo-well"/>
+                      <img src="extra/img/logo-175x135.gif" alt="中国支教联盟" id="logo-well"/>
                   </span>
                 </a>
                 <a href="http://www.go9999.com">
                     <span style="font-size: 24px;display: block; font-weight: bold; margin-bottom: 1em;">梦想，触手可及。</span>
                 </a>
 
-                <p><span class="label" style="text-shadow: 0 -1px 0 rgba(27, 146, 255, 0.25);background-color: #37B4FA;">您可以通过下面的方式关注我们</span>
+                <p><span class="label"
+                         style="text-shadow: 0 -1px 0 rgba(27, 146, 255, 0.25);background-color: #37B4FA;">您可以通过下面的方式关注我们</span>
                     <a class="btn btn-mini pull-right" href="#CMD:WEIXIN" id="show-weixin">微信</a>
                 </p>
+
                 <p class="contact-btns">
                     <a class="btn btn-primary btn-mini" href="http://www.go9999.com">官方网站</a>
                     <a class="btn btn-primary btn-mini" href="http://site.douban.com/118628/">豆瓣小站</a>
                     <a class="btn btn-primary btn-mini" href="http://www.douban.com/group/go9999/">豆瓣小组</a>
                     <a class="btn btn-primary btn-mini" href="http://zhan.renren.com/go9999">人人小站</a>
                     <a class="btn btn-primary btn-mini" href="http://page.renren.com/601714744">公共主页</a>
-                    <a class="btn btn-primary btn-mini" href="http://tieba.baidu.com/f?kw=%D6%D0%B9%FA%D6%A7%BD%CC%C1%AA%C3%CB">百度贴吧</a>
+                    <a class="btn btn-primary btn-mini"
+                       href="http://tieba.baidu.com/f?kw=%D6%D0%B9%FA%D6%A7%BD%CC%C1%AA%C3%CB">百度贴吧</a>
 
                     <a class="btn btn-primary btn-mini" href="http://e.weibo.com/go9999">新浪微博</a>
                     <a class="btn btn-primary btn-mini" href="http://blog.sina.com.cn/mobile1771918357">新浪博客</a>
                 </p>
-                    <div style="clear:both"></div>
+
+                <div style="clear:both"></div>
             </div>
         </div>
     </div>
@@ -49,21 +52,25 @@
         <div class="span6">
             <blockquote>
                 <p>当梦想照进现实，我发现我还需要努力。</p>
-                <small>原生态支教日记 <cite title="当梦想照进现实，我发现我还需要努力（为中国而教体验者感悟）"><a href="http://www.go9999.com/thread-19742-1-1.html" target="_blank">cccowly</a></cite></small>
+                <small>原生态支教日记 <cite title="当梦想照进现实，我发现我还需要努力（为中国而教体验者感悟）"><a
+                            href="http://www.go9999.com/thread-19742-1-1.html" target="_blank">cccowly</a></cite>
+                </small>
 
             </blockquote>
         </div>
         <div class="span6">
             <blockquote class="pull-right">
                 <p>不再有人因为贫穷而失学，不再有人因为闭塞而绝望。</p>
-                <small>原生态支教日记 <cite title="Source Title"><a href="http://www.go9999.com/thread-14385-1-1.html" target="_blank">善善恶恶</a></cite></small>
+                <small>原生态支教日记 <cite title="Source Title"><a href="http://www.go9999.com/thread-14385-1-1.html"
+                                                             target="_blank">善善恶恶</a></cite></small>
             </blockquote>
         </div>
     </div>
     <div class="row">
         <div class="span4">
             <div class="well">
-                <p><span class="label label-important">中国•支教联盟(CNAEF)</span>，创办于2006年4月。由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构。以联系和提供支教为主题，主要发布支教信息，传播贫困地区教育现状，共同关注孩子成长。自成立以来，长期致力于为发达地区爱心咨询寻找资助对象，为欠发达地区教育引入社会各界力量。</p>
+                <p><span class="label label-important">中国•支教联盟(CNAEF)</span>，创办于2006年4月。由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构。以联系和提供支教为主题，主要发布支教信息，传播贫困地区教育现状，共同关注孩子成长。自成立以来，长期致力于为发达地区爱心咨询寻找资助对象，为欠发达地区教育引入社会各界力量。
+                </p>
             </div>
         </div>
         <div class="span4">
@@ -81,18 +88,25 @@
                 <li><abbr title="恰似清风徐来"><span class="badge badge-qq">QQ</span></abbr><code>2295367201</code></li>
             </ul>
             <ul class="span2">
-                <li><abbr title="月亮弯弯one"><span class="badge badge-weibo">新浪微博</span></abbr><a href="http://weibo.com/yeliangwanwan"><code>@月亮弯弯one</code></a></li>
-                <li><abbr title="恰似清风徐来"><span class="badge badge-weibo">新浪微博</span></abbr><a href="http://weibo.com/yeliangwanwan"><code>@恰似清风徐来</code></a></li>
+                <li><abbr title="月亮弯弯one"><span class="badge badge-weibo">新浪微博</span></abbr><a
+                        href="http://weibo.com/yeliangwanwan"><code>@月亮弯弯one</code></a></li>
+                <li><abbr title="恰似清风徐来"><span class="badge badge-weibo">新浪微博</span></abbr><a
+                        href="http://weibo.com/yeliangwanwan"><code>@恰似清风徐来</code></a></li>
             </ul>
             <h4 class="span4">其他事宜请联系：</h4>
             <ul class="span4">
-                <li><abbr title="中国支教联盟网站"><span class="badge badge-mail">电子邮箱</span></abbr> <a href="mailto:admin@go9999.com"><code>admin@go9999.com</code></a></li>
-                <li><abbr title="中国支教联盟网站"><span class="badge badge-weibo">新浪微博</span></abbr> <a href="http://e.weibo.com/go9999n"><code>@中国支教联盟网站</code></a></li>
-                <li><abbr title="中国支教联盟网站"><span class="badge badge-weibo">QQ群</span></abbr> <a href="#"><code>104151030、166393586</code></a></li>
+                <li><abbr title="中国支教联盟网站"><span class="badge badge-mail">电子邮箱</span></abbr> <a
+                        href="mailto:admin@go9999.com"><code>admin@go9999.com</code></a></li>
+                <li><abbr title="中国支教联盟网站"><span class="badge badge-weibo">新浪微博</span></abbr> <a
+                        href="http://e.weibo.com/go9999n"><code>@中国支教联盟网站</code></a></li>
+                <li><abbr title="中国支教联盟网站"><span class="badge badge-weibo">QQ群</span></abbr> <a href="#"><code>104151030、166393586</code></a>
+                </li>
 
-                <li><abbr title="年小恩"><span class="badge badge-mail">电子邮箱</span></abbr> <a href="mailto:louise956@go9999.com"><code>louise956@go9999.com</code></a></li>
-                <li><abbr title="年小恩"><span class="badge badge-weibo">新浪微博</span></abbr> <a href="http://weibo.com/516691809"><code>@年小恩</code></a></li>
-                </ul>
+                <li><abbr title="年小恩"><span class="badge badge-mail">电子邮箱</span></abbr> <a
+                        href="mailto:louise956@go9999.com"><code>louise956@go9999.com</code></a></li>
+                <li><abbr title="年小恩"><span class="badge badge-weibo">新浪微博</span></abbr> <a
+                        href="http://weibo.com/516691809"><code>@年小恩</code></a></li>
+            </ul>
 
         </div>
     </div>
@@ -101,7 +115,7 @@
             <h1 id="we-arrived-title">支教足迹</h1>
         </div>
         <div class="span12">
-            <img id="we-arrived" src="extra/img/map.gif" alt="" width="800" height="570" />
+            <img id="we-arrived" src="extra/img/map.gif" alt="" width="800" height="570"/>
         </div>
     </div>
 </section>
@@ -252,6 +266,7 @@
     </div>
     <p>欢迎有志之士加入联盟大家庭！</p>
     <a class="btn btn-primary btn-large" href="http://www.go9999.com/join/">我要报名参加</a>
+
     <div class="page-header">
         <h1 id="our-album">支教掠影</h1>
     </div>

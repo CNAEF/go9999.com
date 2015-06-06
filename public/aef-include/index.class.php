@@ -16,16 +16,12 @@ if (!defined('FILE_PREFIX')) include "../error-forbidden.php";
 
 class Index extends Safe
 {
-    private $args = [];
-
     function __construct()
     {
-        $this->args = core::init_args(func_get_args());
-        try {
+        $params = func_get_args()[0];
+        $params['footer'] = true;
+        $params['body'] = true;
 
-        } catch (Exception $exception) {
-
-        }
-        echo 'index';
+        new Template($params);
     }
 }
