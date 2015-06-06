@@ -16,16 +16,24 @@ if (!defined('FILE_PREFIX')) include "../error-forbidden.php";
 
 class Join extends Safe
 {
-    private $args = [];
-
     function __construct()
     {
-        $this->args = core::init_args(func_get_args());
-        try {
+        $params = func_get_args()[0];
 
-        } catch (Exception $exception) {
+        $params['nav'] = [
+            'showHomeMenu' => true,
+            'showJoinMenu' => false
+        ];
 
-        }
-        echo 'join';
+        $params['body'] = [];
+        $params['body_file'] = 'join';
+
+
+        $params['footer'] = [
+            'showFriendLinks' => true,
+            'currentYear'     => date('Y')
+        ];
+
+        new Template($params);
     }
 }

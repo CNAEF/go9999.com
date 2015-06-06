@@ -105,7 +105,19 @@ class App extends Safe
      * @return Contact
      */
     public function contact(){
-        return new Contact(['header' => self::get_page_meta('index')]);
+        return new Contact(['header' => self::get_page_meta('contact')]);
+    }
+
+    /**
+     * 网站报名页面
+     *
+     * @since 1.0.1
+     *
+     * @return Contact
+     */
+    public function join()
+    {
+        return new Join(['header' => self::get_page_meta('join')]);
     }
 
     public function hi_cat()
@@ -118,14 +130,6 @@ class App extends Safe
     {
         var_dump($_SERVER);
         echo '404';
-    }
-
-
-    public function join()
-    {
-        echo 'join';
-
-        return true;
     }
 
     public function about()
