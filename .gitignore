@@ -3,6 +3,7 @@
 node_modules/
 bower_components/
 public/aef-content/theme/default_cache
+public/aef-config.php
 logs/*
 !logs/README.md
 
