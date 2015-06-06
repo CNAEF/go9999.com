@@ -28,39 +28,70 @@ class App extends Safe
 
     /**
      * 初始化路由
+     *
+     * @since  0.0.1
+     * @notice 主要的路径下，尽可能囊括更多的选择，诸如/join/?123
      */
     private function init_route()
     {
-        $url = strtolower($_SERVER['REQUEST_URI']);
-
         route::register('/', 'index');
+        route::register('/index.php', 'index');
+        route::register('/\?.*', 'index', true);
 
         route::register('/join', 'join');
+        route::register('/join\?.*', 'join', true);
+        route::register('/join/\?.*', 'join', true);
         route::register('/baoming', 'join');
+        route::register('/baoming\?.*', 'join', true);
+        route::register('/baoming/\?.*', 'join', true);
 
         route::register('/about', 'about');
+        route::register('/about\?.*', 'about', true);
+        route::register('/about/\?.*', 'about', true);
 
         route::register('/links', 'links');
+        route::register('/links\?.*', 'links', true);
+        route::register('/links/\?.*', 'links', true);
 
         route::register('/contact', 'contact');
+        route::register('/contact\?.*', 'contact', true);
+        route::register('/contact/\?.*', 'contact', true);
 
         route::register('/bbs', 'bbs');
+        route::register('/bbs\?.*', 'bbs', true);
+        route::register('/bbs/\?.*', 'bbs', true);
         route::register('/dispbbs.asp', 'bbs');
+        route::register('/dispbbs.asp\?.*', 'bbs', true);
         route::register('/index.asp', 'bbs');
+        route::register('/index.asp\?.*', 'bbs', true);
 
         route::register('/forum', 'forum');
+        route::register('/forum\?.*', 'forum', true);
+        route::register('/forum/\?.*', 'forum', true);
         route::register('/thread', 'forum');
+        route::register('/thread\?.*', 'forum', true);
+        route::register('/thread/\?.*', 'forum', true);
         route::register('/home.php', 'forum');
+        route::register('/home.php\?.*', 'forum', true);
         route::register('/member.php', 'forum');
+        route::register('/member.php\?.*', 'forum', true);
 
-        route::register('.*', 'page404');
+        route::register('/hi-cat', 'hi_cat');
+        route::register('/hi-cat\?.*', 'hi_cat', true);
+        route::register('.*', 'page404', true);
 
         new Route();
+    }
+
+    public function hi_cat()
+    {
+        echo 'hi-cat';
     }
 
 
     public function page404()
     {
+        var_dump($_SERVER);
         echo '404';
     }
 
@@ -94,7 +125,7 @@ class App extends Safe
      */
     public function forum()
     {
-        $orig = $_SERVER['REDIRECT_SCRIPT_URI'];
+        $orig = $_SERVER['SCRIPT_URI'];
         $target = str_replace("www.go9999.com", "bbs.go9999.com", $orig);
         if (isset($_SERVER['REDIRECT_QUERY_STRING']) && !empty($_SERVER['REDIRECT_QUERY_STRING'])) {
             $target = $target . "?" . $_SERVER['REDIRECT_QUERY_STRING'];

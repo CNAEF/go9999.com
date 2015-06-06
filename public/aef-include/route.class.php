@@ -14,7 +14,8 @@
 
 if (!defined('FILE_PREFIX')) include "../error-forbidden.php";
 
-global $RouteRules;
+global $RouteSimpleRules;
+global $RouteRegexpRules;
 
 class Route extends Safe
 {
@@ -33,16 +34,19 @@ class Route extends Safe
     /**
      * 匹配网站路由
      *
+     * @since 0.0.1
+     *
      * @param $uri
      *
      * @return bool
      */
     private function matchRule($uri)
     {
-        global $RouteRules;
+        global $RouteSimpleRules;
+        global $RouteRegexpRules;
 
         // 第一次匹配完全相等的
-        foreach ($RouteRules as $rule => $execute) {
+        foreach ($RouteSimpleRules as $rule => $execute) {
             if ($rule === $uri) {
                 app::$execute();
 
@@ -50,7 +54,7 @@ class Route extends Safe
             }
         }
         // 第二次进行正则匹配
-        foreach ($RouteRules as $rule => $execute) {
+        foreach ($RouteRegexpRules as $rule => $execute) {
             $regexp = '/^' . str_replace('/', '\/', $rule) . '$/';
             if (preg_match($regexp, $uri)) {
                 app::$execute();
@@ -65,20 +69,34 @@ class Route extends Safe
     /**
      * 注册路由
      *
-     * @param $routeName
-     * @param $func
+     * @since       0.0.1
+     *
+     * @param      $routeName
+     * @param      $func
+     * @param bool $isRegexp
      */
-    static function register($routeName, $func)
+    static function register($routeName, $func, $isRegexp = false)
     {
-        global $RouteRules;
+        global $RouteSimpleRules;
+        global $RouteRegexpRules;
 
         $rule = func_get_args();
 
-        if (count($rule) !== 2) {
-            die('注册路由必须传递两个参数');
+        switch (count($rule)) {
+            case 2:
+                $RouteSimpleRules[ $rule[0] ] = $rule[1];
+                break;
+            case 3:
+                if ($isRegexp) {
+                    $RouteRegexpRules[ $rule[0] ] = $rule[1];
+                } else {
+                    $RouteSimpleRules[ $rule[0] ] = $rule[1];
+                }
+                break;
+            default:
+                die('注册路由参数错误。');
         }
 
-        $RouteRules[ $rule[0] ] = $rule[1];
     }
 
 
