@@ -37,22 +37,20 @@
     │   └── theme               模板目录
     ├── aef-include             程序目录
     │   ├── app.class.php           主要功能
-    │   ├── core.class.php          核心函数库
-    │   ├── debug.class.php         调试函数库
+    │   ├── contact.class.php       留言板页面
+    │   ├── core.class.php          核心函数
+    │   ├── debug.class.php         调试函数
     │   ├── index.class.php         首页页面
     │   ├── join.class.php          报名页面
+    │   ├── raintpl.class.php       模板引擎
     │   ├── route.class.php         路由管理
-    │   ├── safe.class.php          安全检查函数库
+    │   ├── safe.class.php          安全检查函数
     │   └── template.class.php      模板函数
     ├── aef-load.php            加载器
     ├── error-forbidden.php     禁止访问提示页面
-    ├── extra
-    │   ├── css
-    │   ├── img
-    │   └── js
     ├── favicon.ico
-    ├── images
-    │   └── logo.gif
+    ├── images					外链的图片目录
+    │   └── logo.gif			本站友链Logo文件
     └── index.php             程序入口文件
 ```
 
