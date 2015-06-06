@@ -1,4 +1,5 @@
-<?php if(!defined('SOULTEARY'))die('Silence is golden.');?>
+<?php if (!defined('FILE_PREFIX')) include "../../../error-forbidden.php"; ?>
+
 <section id="apply-form-box">
     <div class="page-header">
         <h1>关于联盟</h1>

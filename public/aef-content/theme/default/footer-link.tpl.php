@@ -1,4 +1,5 @@
-<?php if(!defined('SOULTEARY'))die('Silence is golden.');?>
+<?php if (!defined('FILE_PREFIX')) include "../../../error-forbidden.php"; ?>
+
 <hr>
 <ul class="nav nav-pills">
     <li class="active"><a href="http://www.go9999.com/links/">友情链接</a></li>

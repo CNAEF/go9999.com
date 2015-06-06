@@ -1,4 +1,5 @@
-<?php if(!defined('SOULTEARY'))die('Silence is golden.');?>
+<?php if (!defined('FILE_PREFIX')) include "../../../error-forbidden.php"; ?>
+
 <section id="apply-form-box">
     <div class="page-header">
         <h1>联盟留言墙</h1>
@@ -14,10 +15,11 @@
     <div class="row">
         <div class="ds-thread"></div>
         <script type="text/javascript">
-        var duoshuoQuery = {short_name:"go9999"};
-            (function(d) {
+            var duoshuoQuery = {short_name : "go9999"};
+            (function (d) {
                 var ds = d.createElement('script');
-                ds.type = 'text/javascript';ds.async = true;
+                ds.type = 'text/javascript';
+                ds.async = true;
                 ds.src = 'http://static.duoshuo.com/embed.js';
                 ds.charset = 'UTF-8';
                 (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(ds);

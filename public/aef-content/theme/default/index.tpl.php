@@ -1,4 +1,5 @@
-<?php if(!defined('SOULTEARY'))die('Silence is golden.');?>
+<?php if (!defined('FILE_PREFIX')) include "../../../error-forbidden.php"; ?>
+
 <header class="jumbotron subhead" id="overview">
     <div class="row">
         <div class="span6">

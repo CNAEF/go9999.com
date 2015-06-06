@@ -1,4 +1,5 @@
-<?php if(!defined('SOULTEARY'))die('Silence is golden.');?>
+<?php if (!defined('FILE_PREFIX')) include "../../../error-forbidden.php"; ?>
+
 <!doctype html>
 <html lang="en-US">
 <head>
