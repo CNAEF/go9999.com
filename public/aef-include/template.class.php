@@ -32,6 +32,7 @@ class Template extends RainTPL
 
         $this->initTemplate();
         ob_start();
+
         if (isset($params['header'])) {
             if (isset($params['header_file'])) {
                 $this->header($params['header'], $params['header_file']);
@@ -39,6 +40,15 @@ class Template extends RainTPL
                 $this->header($params['header']);
             }
         }
+
+        if (isset($params['nav'])) {
+            if (isset($params['nav_file'])) {
+                $this->nav($params['nav'], $params['nav_file']);
+            } else {
+                $this->nav($params['nav']);
+            }
+        }
+
         if (isset($params['body'])) {
             if (isset($params['body_file'])) {
                 $this->body($params['body'], $params['body_file']);
@@ -46,6 +56,7 @@ class Template extends RainTPL
                 $this->body($params['body']);
             }
         }
+
         if (isset($params['footer'])) {
             if (isset($params['footer_file'])) {
                 $this->footer($params['footer'], $params['footer_file']);
@@ -53,6 +64,7 @@ class Template extends RainTPL
                 $this->footer($params['footer']);
             }
         }
+
         $modTpl = ob_get_contents();
         ob_end_clean();
 
@@ -120,6 +132,21 @@ class Template extends RainTPL
      */
     private function header($data, $tpl_name = 'header', $echo = true)
     {
+        return $this->get_template($data, $tpl_name, $echo);
+    }
+
+    /**
+     * 获得页面导航模板
+     *
+     * @since 1.0.1
+     *
+     * @param        $data
+     * @param string $tpl_name
+     * @param bool   $echo
+     *
+     * @return mixed
+     */
+    private function nav($data, $tpl_name = 'nav', $echo = true){
         return $this->get_template($data, $tpl_name, $echo);
     }
 

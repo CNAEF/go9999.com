@@ -3,11 +3,7 @@
     <div class="row">
         <div class="span6">
             <h1>中国·支教联盟</h1>
-            <?php if (date('m') > 10): ?>
-                <p class="lead"><?= date('Y') + 1; ?>年度支教志愿者招募</p>
-            <?php else: ?>
-                <p class="lead"><?= date('Y'); ?>年度支教志愿者招募</p>
-            <?php endif; ?>
+            <p class="lead">{$subTitleYear}年度支教志愿者招募</p>
         </div>
         <div class="span6">
             <div class="well" style="padding: 25px 25px 15px 25px;">

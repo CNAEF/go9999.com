@@ -19,8 +19,25 @@ class Index extends Safe
     function __construct()
     {
         $params = func_get_args()[0];
-        $params['footer'] = true;
-        $params['body'] = true;
+
+        $params['nav'] = [
+            'showHomeMenu' => false,
+            'showJoinMenu' => true
+        ];
+
+        $params['body'] = [];
+
+        // 每年10月开始下一年度志愿者招募
+        if (date('m') > 10) {
+            $subTitleYear = date('Y') + 1;
+        } else {
+            $subTitleYear = date('Y');
+        }
+        $params['body']['subTitleYear'] = $subTitleYear;
+
+        $params['footer'] = [
+            'showFriendLinks' => true
+        ];
 
         new Template($params);
     }

@@ -11,23 +11,22 @@
 
             <div class="nav-collapse collapse" id="main-menu">
                 <ul class="nav" id="main-menu-left">
-                    <?php if ('index' != $PAGE['MODULE']): ?>
-                        <li><a href="http://www.go9999.com">首页</a></li>
-                    <?php endif; ?>
-                    <?php if ('index' == $PAGE['MODULE']): ?>
-                        <li><a href="#about">关于</a></li>
-                        <li><a href="#we-arrived-title">支教足迹</a></li>
-                        <li><a href="#conditions">志愿者须知</a></li>
-                        <li><a href="#our-album">支教掠影</a></li>
-                    <?php endif; ?>
+                    {if="$showHomeMenu===true"}
+                    <li><a href="http://www.go9999.com">首页</a></li>
+                    {else}
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#we-arrived-title">支教足迹</a></li>
+                    <li><a href="#conditions">志愿者须知</a></li>
+                    <li><a href="#our-album">支教掠影</a></li>
+                    {/if}
                     <li><a href="http://www.go9999.com/contact/">留言墙</a></li>
                     <li><a href="http://bbs.go9999.com" target="_blank" id="our-bbs">联盟论坛</a></li>
                 </ul>
                 <ul class="nav pull-right" id="main-menu-right">
-                    <?php if ('join' != $PAGE['MODULE']): ?>
+                    {if="$showHomeMenu===true"}
                         <li><a rel="tooltip" href="http://www.go9999.com/join/" title="我要报名参加">我要报名 <i
                                     class="icon-tasks"></i></a></li>
-                    <?php endif; ?>
+                    {/if}
                     <li><a rel="tooltip" href="http://bbs.go9999.com/forum.php?mod=forumdisplay&fid=118" title="我要反馈建议"
                            target="_blank">反馈建议 <i class="icon-share-alt"></i></a></li>
                 </ul>
