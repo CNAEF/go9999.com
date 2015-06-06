@@ -34,6 +34,7 @@ class Template extends RainTPL
         ob_start();
 
         if (isset($params['header'])) {
+            $params['header']['assets'] = C_ASSETS_PREFIX;
             if (isset($params['header_file'])) {
                 $this->header($params['header'], $params['header_file']);
             } else {
@@ -42,6 +43,7 @@ class Template extends RainTPL
         }
 
         if (isset($params['nav'])) {
+            $params['header']['assets'] = C_ASSETS_PREFIX;
             if (isset($params['nav_file'])) {
                 $this->nav($params['nav'], $params['nav_file']);
             } else {
@@ -50,6 +52,7 @@ class Template extends RainTPL
         }
 
         if (isset($params['body'])) {
+            $params['header']['assets'] = C_ASSETS_PREFIX;
             if (isset($params['body_file'])) {
                 $this->body($params['body'], $params['body_file']);
             } else {
@@ -58,6 +61,7 @@ class Template extends RainTPL
         }
 
         if (isset($params['footer'])) {
+            $params['header']['assets'] = C_ASSETS_PREFIX;
             if (isset($params['footer_file'])) {
                 $this->footer($params['footer'], $params['footer_file']);
             } else {
@@ -111,11 +115,13 @@ class Template extends RainTPL
         if (file_exists(FILE_PREFIX . 'content/theme/' . THEME . '/')) {
             RainTPL::$tpl_dir = FILE_PREFIX . 'content/theme/' . THEME . '/';
             RainTPL::$cache_dir = FILE_PREFIX . 'content/theme/' . THEME . '_cache/';
-            RainTPL::$tpl_ext = 'tpl.php';
         } else {
             RainTPL::$tpl_dir = FILE_PREFIX . 'content/theme/default/';
             RainTPL::$cache_dir = FILE_PREFIX . 'content/theme/default_cache/';
         }
+
+        RainTPL::$tpl_ext = 'tpl.php';
+        RainTPL::$path_replace = false;
         $this->tpl = new RainTPL();
     }
 
@@ -146,7 +152,8 @@ class Template extends RainTPL
      *
      * @return mixed
      */
-    private function nav($data, $tpl_name = 'nav', $echo = true){
+    private function nav($data, $tpl_name = 'nav', $echo = true)
+    {
         return $this->get_template($data, $tpl_name, $echo);
     }
 
@@ -195,6 +202,7 @@ class Template extends RainTPL
      * 根据模板名称渲染模板
      *
      * @since 1.0.1
+     *
      * @param $data
      * @param $tpl_name
      * @param $echo

@@ -9,7 +9,7 @@
             <div class="well" style="padding: 25px 25px 15px 25px;">
                 <a href="http://www.go9999.com" style="display: block;">
                   <span style="float: left; margin: 0 15px 10px 0;display: block;">
-                      <img src="extra/img/logo-175x135.gif" alt="中国支教联盟" id="logo-well"/>
+                      <img src="{$assets}img/logo-175x135.gif" alt="中国支教联盟" id="logo-well"/>
                   </span>
                 </a>
                 <a href="http://www.go9999.com">
@@ -111,7 +111,7 @@
             <h1 id="we-arrived-title">支教足迹</h1>
         </div>
         <div class="span12">
-            <img id="we-arrived" src="extra/img/map.gif" alt="" width="800" height="570"/>
+            <img id="we-arrived" src="{$assets}img/map.gif" alt="" width="800" height="570"/>
         </div>
     </div>
 </section>
@@ -269,42 +269,42 @@
     <ul class="thumbnails">
         <li class="span4">
             <a href="#" class="thumbnail">
-                <img style="width: 360px; height: 270px;" src="extra/img/pic-1.jpg">
+                <img style="width: 360px; height: 270px;" src="{$assets}img/pic-1.jpg">
             </a>
         </li>
         <li class="span3">
             <a href="#" class="thumbnail">
-                <img style="width: 260px; height: 120px;" src="extra/img/pic-2.jpg">
+                <img style="width: 260px; height: 120px;" src="{$assets}img/pic-2.jpg">
             </a>
         </li>
         <li class="span2">
             <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="extra/img/pic-3.jpg">
+                <img style="width: 160px; height: 120px;" src="{$assets}img/pic-3.jpg">
             </a>
         </li>
         <li class="span3">
             <a href="#" class="thumbnail">
-                <img style="width: 260px; height: 120px;" src="extra/img/pic-4.jpg">
+                <img style="width: 260px; height: 120px;" src="{$assets}img/pic-4.jpg">
             </a>
         </li>
         <li class="span2">
             <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="extra/img/pic-5.jpg">
+                <img style="width: 160px; height: 120px;" src="{$assets}img/pic-5.jpg">
             </a>
         </li>
         <li class="span2">
             <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="extra/img/pic-6.jpg">
+                <img style="width: 160px; height: 120px;" src="{$assets}img/pic-6.jpg">
             </a>
         </li>
         <li class="span2">
             <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="extra/img/pic-7.jpg">
+                <img style="width: 160px; height: 120px;" src="{$assets}img/pic-7.jpg">
             </a>
         </li>
         <li class="span2">
             <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="extra/img/pic-8.jpg">
+                <img style="width: 160px; height: 120px;" src="{$assets}img/pic-8.jpg">
             </a>
         </li>
     </ul>

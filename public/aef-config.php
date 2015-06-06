@@ -30,7 +30,8 @@ define('C_CHARSET', 'utf-8');
 
 /** 站点名称 */
 define('C_SITE_NAME', '中国·支教联盟');
-
+/** 静态资源地址 */
+define('C_ASSETS_PREFIX', '//www.go9999.com/assets/');
 
 /** 载入程序模块 */
 function __autoload($classname)

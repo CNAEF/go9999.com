@@ -38,7 +38,7 @@
         href="http://www.google.com/webfonts">Google</a>. Favicon by <a href="https://twitter.com/geraldhiller">Gerald
         Hiller</a>.<p></p>
 
-    <p>Copyright &copy;2005-<?= date('Y'); ?> Go9999.com All Rights Reserved. 原备案号
+    <p>Copyright &copy;2005-{$currentYear} Go9999.com All Rights Reserved. 原备案号
         <del style="color: #A8A3A3;">浙ICP备07022599号</del>
         ，现备案号<a href="http://www.miibeian.gov.cn/" target="_blank">浙ICP备12032988号-1</a>
         <a class="qihu-scan" href="http://webscan.360.cn/index/checkwebsite/url/www.go9999.com"><img border="0"
@@ -48,7 +48,7 @@
     </p>
 </footer>
 </div>
-<script type="text/javascript" src="extra/js/packed.min.js"></script>
+<script type="text/javascript" src="{$assets}js/packed.min.js"></script>
 <script type="text/javascript">
     (function (w, d, $, author) {
         if (!w.console || !w.console.log) {

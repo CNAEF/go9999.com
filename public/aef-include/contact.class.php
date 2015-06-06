@@ -2,7 +2,7 @@
 /**
  * CNAEF
  *
- * 网站首页。
+ * 网站留言墙。
  *
  * @version 1.0.1
  *
@@ -14,26 +14,20 @@
 
 if (!defined('FILE_PREFIX')) include "../error-forbidden.php";
 
-class Index extends Safe
+class Contact extends Safe
 {
     function __construct()
     {
         $params = func_get_args()[0];
 
         $params['nav'] = [
-            'showHomeMenu' => false,
+            'showHomeMenu' => true,
             'showJoinMenu' => true
         ];
 
         $params['body'] = [];
+        $params['body_file'] = 'contact';
 
-        // 每年10月开始下一年度志愿者招募
-        if (date('m') > 10) {
-            $subTitleYear = date('Y') + 1;
-        } else {
-            $subTitleYear = date('Y');
-        }
-        $params['body']['subTitleYear'] = $subTitleYear;
 
         $params['footer'] = [
             'showFriendLinks' => true,

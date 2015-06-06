@@ -90,11 +90,22 @@ class App extends Safe
      *
      * @since 1.0.1
      *
-     * @return bool
+     * @return Index
      */
     public function index()
     {
         return new Index(['header' => self::get_page_meta('index')]);
+    }
+
+    /**
+     * 网站留言墙
+     *
+     * @since 1.0.1
+     *
+     * @return Contact
+     */
+    public function contact(){
+        return new Contact(['header' => self::get_page_meta('index')]);
     }
 
     public function hi_cat()
