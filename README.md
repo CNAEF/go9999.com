@@ -49,9 +49,9 @@
     ├── aef-load.php            加载器
     ├── error-forbidden.php     禁止访问提示页面
     ├── favicon.ico
-    ├── images                外链的图片目录
+    ├── images              外链的图片目录
     │   └── logo.gif            本站友链Logo文件
-    └── index.php             程序入口文件
+    └── index.php           程序入口文件
 ```
 
 
