@@ -24,8 +24,14 @@
 
 if (!defined('FILE_PREFIX')) include "../error-forbidden.php";
 
+/**
+ * 用于保存程序启动参数
+ */
+global $arguments;
+
 class Core
 {
+
     /**
      * 创建关联数组
      *
@@ -64,12 +70,23 @@ class Core
      */
     public function init_args($args)
     {
+        global $arguments;
+
         $result = [];
         for ($i = 0, $n = count($args); $i < $n; $i++) {
             $result = self::associative_push($args[ $i ], $result);
         }
 
-        return $result;
+        $arguments = $result;
+
+        return $arguments;
+    }
+
+    public function get_args()
+    {
+        global $arguments;
+
+        return $arguments;
     }
 
     /**

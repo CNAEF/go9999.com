@@ -14,80 +14,82 @@
 
 if (!defined('FILE_PREFIX')) include "../error-forbidden.php";
 
+global $RouteRules;
+
 class Route extends Safe
 {
-    private $args = [];
 
     function __construct()
     {
-        $this->args = core::init_args(func_get_args());
+        $current_uri = strtolower($_SERVER['REQUEST_URI']);
+        $len = strlen($current_uri);
+        // 当请求路径非根目录时，去掉URI请求后的`/`
+        if ($len > 1 && substr($current_uri, $len - 1, 1) === '/') {
+            $current_uri = substr($current_uri, 0, $len - 1);
+        }
+        $this->matchRule($current_uri);
+    }
+
+    /**
+     * 匹配网站路由
+     *
+     * @param $uri
+     *
+     * @return bool
+     */
+    private function matchRule($uri)
+    {
+        global $RouteRules;
+
+        // 第一次匹配完全相等的
+        foreach ($RouteRules as $rule => $execute) {
+            if ($rule === $uri) {
+                app::$execute();
+
+                return true;
+            }
+        }
+        // 第二次进行正则匹配
+        foreach ($RouteRules as $rule => $execute) {
+            $regexp = '/^' . str_replace('/', '\/', $rule) . '$/';
+            if (preg_match($regexp, $uri)) {
+                app::$execute();
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * 注册路由
+     *
+     * @param $routeName
+     * @param $func
+     */
+    static function register($routeName, $func)
+    {
+        global $RouteRules;
+
+        $rule = func_get_args();
+
+        if (count($rule) !== 2) {
+            die('注册路由必须传递两个参数');
+        }
+
+        $RouteRules[ $rule[0] ] = $rule[1];
+    }
+
+
+    function test()
+    {
+        $url = strtolower($_SERVER['REQUEST_URI']);
+
         try {
 
         } catch (Exception $exception) {
 
         }
-
-        $url = strtolower($_SERVER['REQUEST_URI']);
-
-        if (substr($url, 0, 5) == '/join') {
-            $PAGE['ACTION'] = 'JOIN';
-        } else if (substr($url, 0, 6) == '/about') {
-            $PAGE['ACTION'] = 'ABOUT';
-        } else if (substr($url, 0, 8) == '/contact') {
-            $PAGE['ACTION'] = 'CONTACT';
-        } else if (substr($url, 0, 6) == '/links') {
-            $PAGE['ACTION'] = 'LINKS';
-        } else if (substr($url, 0, 4) == '/bbs' || substr($url, 0, 12) == '/dispbbs.asp' || substr($url, 0, 10) == '/index.asp') {
-            header('Location: http://bbs.go9999.com');
-            exit();
-        } else if (substr($url, 0, 6) == '/forum' || substr($url, 0, 7) == '/thread' || substr($url, 0, 9) == '/home.php' || substr($url, 0, 11) == '/member.php') {
-            $orig = $_SERVER['REDIRECT_SCRIPT_URI'];
-            $target = str_replace("www.go9999.com", "bbs.go9999.com", $orig);
-            if (isset($_SERVER['REDIRECT_QUERY_STRING']) && !empty($_SERVER['REDIRECT_QUERY_STRING'])) {
-                $target = $target . "?" . $_SERVER['REDIRECT_QUERY_STRING'];
-            }
-            header('Location: ' . $target);
-            exit();
-        } else {
-            $PAGE['ACTION'] = 'INDEX';
-        }
-
-        switch ($PAGE['ACTION']) {
-            case 'LINKS':
-                $PAGE['TITLE'] = '友情链接 - 中国·支教联盟';
-                $PAGE['KEYWORD'] = '中国支教联盟,志愿者招募,志愿者,招募,支教,支教网,中国支教网,支教联盟,中国支教,中国支教联盟网,支教网站,go9999,中国支教联盟官网,云南支教网,支教中国,全国支教网,支教 中国,中华支教,短期支教,长期支教,支教志愿者,四川支教网,贵州四川广西湖南支教';
-                $PAGE['DESC'] = '中国•支教联盟(CNAEF)，友情链接页面。';
-                $PAGE['MODULE'] = 'links';
-                break;
-            case 'CONTACT':
-                $PAGE['TITLE'] = '留言墙 - 中国·支教联盟';
-                $PAGE['KEYWORD'] = '中国支教联盟,志愿者招募,志愿者,招募,支教,支教网,中国支教网,支教联盟,中国支教,中国支教联盟网,支教网站,go9999,中国支教联盟官网,云南支教网,支教中国,全国支教网,支教 中国,中华支教,短期支教,长期支教,支教志愿者,四川支教网,贵州四川广西湖南支教';
-                $PAGE['DESC'] = '中国•支教联盟(CNAEF)，留言墙页面。';
-                $PAGE['MODULE'] = 'contact';
-                break;
-            case 'ABOUT':
-                $PAGE['TITLE'] = '关于我们 - 中国·支教联盟';
-                $PAGE['KEYWORD'] = '中国支教联盟,志愿者招募,志愿者,招募,支教,支教网,中国支教网,支教联盟,中国支教,中国支教联盟网,支教网站,go9999,中国支教联盟官网,云南支教网,支教中国,全国支教网,支教 中国,中华支教,短期支教,长期支教,支教志愿者,四川支教网,贵州四川广西湖南支教';
-                $PAGE['DESC'] = '中国•支教联盟(CNAEF)，创办于2006年4月。自成立以来，长期致力于为发达地区爱心咨询寻找资助对象，为欠发达地区教育引入社会各界力量。';
-                $PAGE['MODULE'] = 'about';
-                break;
-            case 'JOIN':
-                $PAGE['TITLE'] = '志愿者招募 - 中国·支教联盟';
-                $PAGE['KEYWORD'] = '中国支教联盟,志愿者招募,志愿者,招募,支教,支教网,中国支教网,支教联盟,中国支教,中国支教联盟网,支教网站,go9999,中国支教联盟官网,云南支教网,支教中国,全国支教网,支教 中国,中华支教,短期支教,长期支教,支教志愿者,四川支教网,贵州四川广西湖南支教';
-                $PAGE['DESC'] = '中国•支教联盟(CNAEF)，志愿者招募申请地址，我们期待你的加入。';
-                $PAGE['MODULE'] = 'join';
-                break;
-            default:
-                $PAGE['TITLE'] = '中国·支教联盟';
-                $PAGE['KEYWORD'] = '中国支教联盟,志愿者招募,志愿者,招募,支教,支教网,中国支教网,支教联盟,中国支教,中国支教联盟网,支教网站,go9999,中国支教联盟官网,云南支教网,支教中国,全国支教网,支教 中国,中华支教,短期支教,长期支教,支教志愿者,四川支教网,贵州四川广西湖南支教';
-                $PAGE['DESC'] = '中国•支教联盟(CNAEF)，创办于2006年4月。自成立以来，长期致力于为发达地区爱心咨询寻找资助对象，为欠发达地区教育引入社会各界力量。';
-                $PAGE['MODULE'] = 'index';
-                break;
-        }
-
-        include('./view/header.tpl.php');
-        include('./view/nav.tpl.php');
-        include('./view/' . $PAGE['MODULE'] . '.tpl.php');
-        include('./view/footer.tpl.php');
     }
 }

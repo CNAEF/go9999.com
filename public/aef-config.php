@@ -22,9 +22,12 @@ define('THEME', 'default');
 /** 开启GZIP压缩(如果调试模式被激活，那么忽略此设置。) */
 define('GZIP', true);
 /** 语言设置 */
-define('E_LANG', 'zh-CN');
+define('C_LANG', 'zh-CN');
 /** 字符集设置 */
-define('E_CHARSET', 'utf-8');
+define('C_CHARSET', 'utf-8');
+
+/** 站点名称 */
+define('C_SITE_NAME', '中国·支教联盟');
 
 
 /** 载入程序模块 */
@@ -45,5 +48,5 @@ function __autoload($classname)
 }
 
 /** 输出网站内容 */
-$CNAEF = new Route(['THEME' => THEME, 'GZIP' => GZIP, 'DEBUG' => DEBUG]);
+$CNAEF = new App(['THEME' => THEME, 'GZIP' => GZIP, 'DEBUG' => DEBUG]);
 
