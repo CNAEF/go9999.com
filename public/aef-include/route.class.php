@@ -98,16 +98,4 @@ class Route extends Safe
         }
 
     }
-
-
-    function test()
-    {
-        $url = strtolower($_SERVER['REQUEST_URI']);
-
-        try {
-
-        } catch (Exception $exception) {
-
-        }
-    }
 }
