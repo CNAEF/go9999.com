@@ -104,7 +104,8 @@ class App extends Safe
      *
      * @return Contact
      */
-    public function contact(){
+    public function contact()
+    {
         return new Contact(['header' => self::get_page_meta('contact')]);
     }
 
@@ -125,11 +126,16 @@ class App extends Safe
         echo 'hi-cat';
     }
 
-
+    /**
+     * 显示404页面
+     *
+     * @since 1.0.1
+     *
+     * @return Page404
+     */
     public function page404()
     {
-        var_dump($_SERVER);
-        echo '404';
+        include ABSPATH . FILE_PREFIX . "404.php";
     }
 
     public function about()
