@@ -6,6 +6,7 @@ public/aef-content/theme/default_cache
 public/aef-config.php
 logs/*
 !logs/README.md
+conf/main.conf
 
 .DS_Store
 *.db
