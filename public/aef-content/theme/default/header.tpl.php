@@ -18,7 +18,7 @@
     <meta name="keywords" content="{$KEYWORD}"/>
     <meta name="description" content="{$DESC}"/>
     <meta name="author" content="soulteary inspire by Thomas Park"/>
-    <link rel="stylesheet" href="{$assets}css/packed.min.css?v=1107"/>
+    <link rel="stylesheet" href="{$assets}css/packed.min.css?v=20150610"/>
     <meta property="wb:webmaster" content="c6eb3350438219e9"/>
     <!--[if lt IE 9]>
     <script src="assets/js/html5.js"></script>

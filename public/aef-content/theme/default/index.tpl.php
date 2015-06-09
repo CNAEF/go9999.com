@@ -78,17 +78,6 @@
             </ul>
         </div>
         <div class="span4">
-            <h4>支教请联系行政部：</h4>
-            <ul class="span2">
-                <li><abbr title="月亮弯弯one"><span class="badge badge-qq">QQ</span></abbr><code>511513957</code></li>
-                <li><abbr title="恰似清风徐来"><span class="badge badge-qq">QQ</span></abbr><code>2295367201</code></li>
-            </ul>
-            <ul class="span2">
-                <li><abbr title="月亮弯弯one"><span class="badge badge-weibo">新浪微博</span></abbr><a
-                        href="http://weibo.com/yeliangwanwan"><code>@月亮弯弯one</code></a></li>
-                <li><abbr title="恰似清风徐来"><span class="badge badge-weibo">新浪微博</span></abbr><a
-                        href="http://weibo.com/yeliangwanwan"><code>@恰似清风徐来</code></a></li>
-            </ul>
             <h4 class="span4">其他事宜请联系：</h4>
             <ul class="span4">
                 <li><abbr title="中国支教联盟网站"><span class="badge badge-mail">电子邮箱</span></abbr> <a
@@ -97,9 +86,6 @@
                         href="http://e.weibo.com/go9999n"><code>@中国支教联盟网站</code></a></li>
                 <li><abbr title="中国支教联盟网站"><span class="badge badge-weibo">QQ群</span></abbr> <a href="#"><code>104151030、166393586</code></a>
                 </li>
-
-                <li><abbr title="年小恩"><span class="badge badge-mail">电子邮箱</span></abbr> <a
-                        href="mailto:louise956@go9999.com"><code>louise956@go9999.com</code></a></li>
                 <li><abbr title="年小恩"><span class="badge badge-weibo">新浪微博</span></abbr> <a
                         href="http://weibo.com/516691809"><code>@年小恩</code></a></li>
             </ul>

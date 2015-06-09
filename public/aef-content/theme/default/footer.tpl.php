@@ -5,11 +5,8 @@
     <ul class="nav nav-pills">
         <li class="active"><a href="http://www.go9999.com/links/">友情链接</a></li>
         <li><a class="btn-mini" href="http://bbs.hfly.net/" target="_blank">庐阳教育论坛</a></li>
-        <li><a class="btn-mini" href="http://www.instart.net/" target="_blank">公益网</a></li>
-        <li><a class="btn-mini" href="http://www.snoah.org/" target="_blank" title="圣诺亚爱心公益网">圣诺亚爱心公益网</a></li>
         <li><a class="btn-mini" href="http://bbs.cnbayue.com/" target="_blank" title="滴水公益论坛">滴水公益论坛</a></li>
         <li><a class="btn-mini" href="http://www.bmf-sc.com/" target="_blank" title="四川仁爱医疗基金会">四川仁爱医疗基金会</a></li>
-        <li><a class="btn-mini" href="http://www.yjszjt.cn/" target="_blank" title="中国志愿者">中国志愿者</a></li>
         <li><a class="btn-mini" href="http://www.ew125.com/" target="_blank" title="成都抗癌协会">成都抗癌协会</a></li>
         <li><a class="btn-mini" href="http://xzszhc.2008red.com/" target="_blank" title="进藏教师家园">进藏教师家园</a></li>
         <li><a class="btn-mini" href="http://www.ricedonate.com/" target="_blank" title="米公益">米公益</a></li>
@@ -41,10 +38,17 @@
     <p>Copyright &copy;2005-{$currentYear} Go9999.com All Rights Reserved. 原备案号
         <del style="color: #A8A3A3;">浙ICP备07022599号</del>
         ，现备案号<a href="http://www.miibeian.gov.cn/" target="_blank">浙ICP备12032988号-1</a>
-        <a class="qihu-scan" href="http://webscan.360.cn/index/checkwebsite/url/www.go9999.com"><img border="0"
-                                                                                                     src="http://img.webscan.360.cn/status/pai/hash/48769dbd5f34f2752487196d0b70a0ea"/></a>
-        <a id="sae-support" href="http://sae.sina.com.cn" target="_blank"
-           title="中国支教联盟网站正运行在Sina App Engine上。">新浪云计算</a>
+        <div class="logo-container">
+            <a class="logo-pic" href="http://sae.sina.com.cn" target="_blank" title="中国支教联盟网站正运行在Sina App Engine上。">
+                <img border="0" src="http://www.go9999.com/assets/img/sae-support.png?v=20150610"/>
+            </a>
+            <a class="logo-pic" href="http://mos.meituan.com" target="_blank" title="美团云赞助联盟一年运行时间。">
+                <img border="0" src="http://www.go9999.com/assets/img/mt-logo.png?v=20150610"/>
+            </a>
+            <a class="logo-pic" href="http://webscan.360.cn/index/checkwebsite/url/www.go9999.com">
+                <img border="0" src="http://img.webscan.360.cn/status/pai/hash/48769dbd5f34f2752487196d0b70a0ea?v=20150610"/>
+            </a>
+        </div>
     </p>
 </footer>
 </div>
