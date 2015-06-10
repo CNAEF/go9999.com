@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('FILE_PREFIX')) include "../error-forbidden.php";
+
 /**
  *  RainTPL
  *  -------
