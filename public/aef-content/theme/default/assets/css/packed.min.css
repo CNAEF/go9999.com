@@ -85,7 +85,7 @@ li abbr[title] {
 #action-form .radio-label{
     display:inline;
     font-size: 12px;
-    margin-left:1em;
+    padding-left:1em;
     padding-right:2em;
 }
 #action-form input,#action-form select{
