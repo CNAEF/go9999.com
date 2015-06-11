@@ -264,14 +264,12 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="cur_status">现在的状态</label>
+                    <label class="control-label" for="status_work">现在的状态</label>
 
                     <div class="controls">
-                        <select id="cur_status" name="cur_status">
-                            <option value="1" selected>工作</option>
-                            <option value="2">学习</option>
-                            <option value="3">无业</option>
-                        </select>
+                        <input type="radio" id="status_work" name="cur_status" value="1" checked="true"><label for="status_work" class="radio-label">工作</label></input>
+                        <input type="radio" id="status_learn" name="cur_status" value="2"><label for="status_learn" class="radio-label">学习</label></input>
+                        <input type="radio" id="status_free" name="cur_status" value="3"><label for="status_free" class="radio-label">无业</label></input>
                     </div>
                 </div>
                 <div class="control-group">
