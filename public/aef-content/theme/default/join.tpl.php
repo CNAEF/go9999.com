@@ -333,4 +333,4 @@
                 </div>
             </fieldset>
         </form>
-    </section><footer id="footer">
+    </section>
