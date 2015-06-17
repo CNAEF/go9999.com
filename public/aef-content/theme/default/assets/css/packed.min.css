@@ -96,6 +96,9 @@ li abbr[title] {
     width:20em;
     height:100px;
 }
+#action-form input[type=radio]{
+    width:1em;
+}
 #action-form .question_label{
     width:100%;
     max-width:38em;
@@ -107,9 +110,7 @@ li abbr[title] {
     max-width:33em;
     margin-bottom:1em;
 }
-#action-form input[type=radio]{
-    width:1em;
-}
+
 #show-weixin {
     background: url('../img/weixin-btn.png');
     background-size: 50px;
