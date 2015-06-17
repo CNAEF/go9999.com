@@ -377,7 +377,7 @@
         </form>
         <script src="assets/js/data.js"></script>
         <script src="assets/js/jquery-1.11.3.min.js"></script>
-        <script src="assets/jquery.city.select.min.js"></script>
+        <script src="assets/js/jquery.city.select.min.js"></script>
         <script src="assets/js/prettify.js"></script>
         <script type="text/javascript">
             $('#province, #city').citylist({
