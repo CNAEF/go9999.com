@@ -92,6 +92,13 @@ li abbr[title] {
     width:20em;
     height:32px;
 }
+#action-form .two_select{
+    width:10em;
+}
+#action-form .input-check{
+    display:none;
+    color:#820;
+}
 #action-form textarea{
     width:20em;
     height:100px;
