@@ -4,6 +4,7 @@ node_modules/
 bower_components/
 public/aef-content/theme/default_cache
 public/aef-config.php
+public/aef-content/theme/default/assets/src/less/app.min.css
 logs/*
 !logs/README.md
 conf/main.conf

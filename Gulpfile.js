@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 
 var less = require('gulp-less');
@@ -14,12 +16,20 @@ var config = {
     cssDistDir : './public/aef-content/theme/default/assets/css/'
 };
 
-
 gulp.task('default', ['style:less', 'scripts:build'], function () {});
 
 gulp.task('style:less', function () {
-    return gulp.src(config.cssSrcDir + 'style.less')
+
+    gulp.src(config.cssSrcDir + 'style.less')
         .pipe(less({'compress' : !devMode}))
+        .pipe(concat('app.min.css'))
+        .pipe(gulp.dest(config.cssSrcDir));
+
+    return gulp.src([
+        config.cssSrcDir + 'bootstrap.min.css',
+        config.cssSrcDir + 'bootstrap-responsive.min.css',
+        config.cssSrcDir + 'app.min.css'
+    ])
         .pipe(concat('core.min.css'))
         .pipe(gulp.dest(config.cssDistDir));
 });
