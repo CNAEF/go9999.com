@@ -1,5 +1,5 @@
 <?php if (!defined('FILE_PREFIX')) include '../../../error-forbidden.php'; ?>
-<section id="apply-form-box">
+<section id="page-box-about">
     <div class="page-header">
         <h1>关于联盟</h1>
     </div>

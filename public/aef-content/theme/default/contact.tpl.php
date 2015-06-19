@@ -1,5 +1,5 @@
 <?php if (!defined('FILE_PREFIX')) include '../../../error-forbidden.php'; ?>
-<section id="apply-form-box">
+<section id="page-box-contact">
     <div class="page-header">
         <h1>联盟留言墙</h1>
     </div>
@@ -14,7 +14,7 @@
     <div class="row">
         <div class="ds-thread"></div>
         <script type="text/javascript">
-            var duoshuoQuery = {short_name : "go9999"};
+            var duoshuoQuery = {short_name : 'go9999'};
             (function (d) {
                 var ds = d.createElement('script');
                 ds.type = 'text/javascript';

@@ -1,5 +1,5 @@
 <?php if (!defined('FILE_PREFIX')) include '../../../error-forbidden.php'; ?>
-<section id="apply-form-box">
+<section id="page-box-links">
     <div class="page-header">
         <h1>友情链接</h1>
     </div>
