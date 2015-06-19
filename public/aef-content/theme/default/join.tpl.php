@@ -375,5 +375,4 @@
             </fieldset>
                     <table border=1 bordercolor="#787" id="progress_table" style="width:33em;height:1em;margin-top:0.5em;font-size:14px;display:none;"><tr><td id="progress_td" style="width:1%;background:#2a0;"></td><td></td></tr></table>
         </form>
-        <script src="assets/join.min.js"></script>
     </section>
