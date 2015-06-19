@@ -20,6 +20,10 @@ class Contact extends Safe
     {
         $params = func_get_args()[0];
 
+        $params['header'] = [
+            'pageName' => 'contact'
+        ];
+
         $params['nav'] = [
             'showHomeMenu' => true,
             'showJoinMenu' => true

@@ -20,6 +20,10 @@ class Index extends Safe
     {
         $params = func_get_args()[0];
 
+        $params['header'] = [
+            'pageName' => 'home'
+        ];
+
         $params['nav'] = [
             'showHomeMenu' => false,
             'showJoinMenu' => true

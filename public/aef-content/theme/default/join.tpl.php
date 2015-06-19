@@ -12,44 +12,57 @@
             </div>
         </div>
 
-        <form class="form-horizontal well" id="action-form" action="test.php" method="post">
+        <form class="form-horizontal well" id="action-form" action="http://apply.go9999.com/join/" method="post">
             <fieldset>
                 <legend>基本资料</legend>
-                <div class="control-group">
-                    <label class="control-label" for="username">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
-
-                    <div class="controls">
-                        <input type="text" class="input-xlarge" name="info1_username" id="username" onblur="checkItems('username')">
-                        <p class="input-check" id="username-check">请输入2-4个汉字姓名！</p>
+                <div class="row-fluid">
+                    <div class="control-group span3">
+                        <div class="controls input-prepend">
+                            <span class="add-on">姓　　名</span>
+                            <input type="text" class="input-xlarge js-required" name="username" id="js-username" placeholder="中文名称">
+                        </div>
+                        <div class="alert">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>提示：</strong> 请输入你的中文名字（2~4个汉字）。
+                        </div>
+                    </div>
+                    <div class="control-group span3">
+                        <div class="controls input-prepend">
+                            <span class="add-on">性　　别</span>
+                            <select name="sex">
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
-                <div class="control-group">
-                    <label class="control-label" for="sex_male">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
-
-                    <div class="controls">
-                        <input type="radio" id="sex_male" name="info1_user_sex" value="1" checked="true"><label for="sex_male" class="radio-label">男</label></input>
-                        <input type="radio" id="sex_female" name="info1_user_sex" value="2"><label for="sex_female" class="radio-label">女</label></input>
+                <div class="row-fluid">
+                    <div class="control-group span6">
+                        <div class="controls input-prepend">
+                            <span class="add-on">出生日期</span>
+                            <input type="text" class="input-xlarge js-required" name="birthday" id="js-birthday" placeholder="请填写真实的出生日期">
+                        </div>
+                        <div class="alert">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>提示：</strong> 格式:19800321，且需年满21周岁！。
+                        </div>
+                    </div>
+                    <div class="control-group span6">
+                        <div class="controls input-prepend">
+                            <span class="add-on">婚姻状况</span>
+                            <select name="married">
+                                <option value="1">未婚</option>
+                                <option value="2">已婚</option>
+                            </select>
+                        </div>
+                        <div class="alert">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>提示：</strong> 格式:1980 03 21，且需年满21周岁！。
+                        </div>
                     </div>
                 </div>
 
-                <div class="control-group">
-                    <label class="control-label" for="user_birthday">出生日期</label>
-
-                    <div class="controls">
-                        <input type="date" class="input-xlarge" name="info1_user_birthday" id="user_birthday" onblur="checkItems('user_birthday')">
-                        <p class="input-check" id="user_birthday-check">格式:1980-03-21，且需年满21周岁！</p>
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <label class="control-label" for="no_married">婚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;否</label>
-
-                    <div class="controls">
-                        <input type="radio" id="no_married" name="info1_user_is_married" value="1" checked="true"><label for="no_married" class="radio-label">未婚</label></input>
-                        <input type="radio" id="is_married" name="info1_user_is_married" value="2"><label for="is_married" class="radio-label">已婚</label></input>
-                    </div>
-                </div>
 
                 <div class="control-group">
                     <label class="control-label" for="province_home">籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯</label>

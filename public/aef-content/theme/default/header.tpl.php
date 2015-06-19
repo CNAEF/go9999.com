@@ -24,4 +24,4 @@
     <script src="assets/js/html5.js"></script>
     <![endif]-->
 </head>
-<body class="go9999" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
+<body class="go9999" id="page-{$pageName}" data-spy="scroll" data-target=".subnav" data-offset="80">
