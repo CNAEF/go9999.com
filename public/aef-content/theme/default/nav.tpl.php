@@ -23,9 +23,8 @@
                     <li><a href="http://bbs.go9999.com" target="_blank" id="our-bbs">联盟论坛</a></li>
                 </ul>
                 <ul class="nav pull-right" id="main-menu-right">
-                    {if="$showHomeMenu===true"}
-                        <li><a rel="tooltip" href="http://www.go9999.com/join/" title="我要报名参加">我要报名 <i
-                                    class="icon-tasks"></i></a></li>
+                    {if="$showJoinMenu===true"}
+                        <li><a rel="tooltip" href="http://www.go9999.com/join/" title="我要报名参加">我要报名 <i class="icon-tasks"></i></a></li>
                     {/if}
                     <li><a rel="tooltip" href="http://bbs.go9999.com/forum.php?mod=forumdisplay&fid=118" title="我要反馈建议"
                            target="_blank">反馈建议 <i class="icon-share-alt"></i></a></li>
