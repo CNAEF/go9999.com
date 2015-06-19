@@ -82,6 +82,41 @@ li abbr[title] {
 #action-form .control-label {
     font-size: 12px;
 }
+#action-form .radio-label{
+    display:inline;
+    font-size: 12px;
+    padding-left:1em;
+    padding-right:2em;
+}
+#action-form input,#action-form select{
+    width:20em;
+    height:32px;
+}
+#action-form .two_select{
+    width:10em;
+}
+#action-form .input-check{
+    display:none;
+    color:#820;
+}
+#action-form textarea{
+    width:20em;
+    height:100px;
+}
+#action-form input[type=radio]{
+    width:1em;
+}
+#action-form .question_label{
+    width:100%;
+    max-width:38em;
+    font-size:12px;
+    padding-top:1em;
+}
+#action-form .question_text{
+    width:100%;
+    max-width:33em;
+    margin-bottom:1em;
+}
 
 #show-weixin {
     background: url('../img/weixin-btn.png');
