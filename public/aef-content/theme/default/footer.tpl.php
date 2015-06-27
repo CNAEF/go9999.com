@@ -64,5 +64,18 @@
         <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">关闭</button>
     </div>
 </script>
+<script src="/assets/js/jquery.validate.min.js"></script>
+<script>
+	$(function(){
+		$("#action-form2").validate({
+		   rules: {
+			 // no quoting necessary
+			 begin_date: "required",
+			 cur_status: "required",
+		   }
+		 });
+	});
+</script>
+
 </body>
 </html>
