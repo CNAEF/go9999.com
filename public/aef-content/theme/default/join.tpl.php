@@ -20,28 +20,17 @@
 					<div class="controls">
 						<input type="text" class="input-xlarge required" name="name" id="form_name" placeholder="">
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请输入你的中文名字（2~4个汉字）。
-                    </div>
-					-->
 				</div>
 				
 				<div class="control-group">
 					<label class="control-label" for="form_sex">性　　别</label>
 					<div class="controls">
 						<select name="sex" id="form_sex" class="required">
+							<option value=""> - </option>
                             <option value="1">男</option>
                             <option value="2">女</option>
                         </select>
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请选择您的性别。
-                    </div>
-					-->
 				</div>
 				
 				<div class="control-group">
@@ -49,46 +38,30 @@
 					<div class="controls">
 						<input type="text" class="input-xlarge required" name="birthday" id="form_birthday" placeholder="">
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请填写真实的出生日期，且年满21周岁！
-                    </div>
-					-->
 				</div>
 				
 				<div class="control-group">
 					<label class="control-label" for="form_married">婚姻状况</label>
 					<div class="controls">
 						<select name="married" id="form_married" class="required">
+							<option value=""> - </option>
                             <option value="1">未婚</option>
                             <option value="2">已婚</option>
                         </select>
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请填写您的婚姻状况！
-                    </div>
-					-->
 				</div>
 				
 				<div class="control-group">
 					<label class="control-label" for="form_hometown_province">籍　　贯</label>
 					<div class="controls">
-						<select id="form_hometown_province" name="hometown_province" class="required">
-							<option value="载入中">载入中</option>
+						<select id="form_hometown_province" name="hometown_province">
+							<option value="">载入中</option>
 						</select>
 						<select id="form_hometown_city" name="hometown_city" class="required">
-							<option value="载入中">载入中</option>
+							<option value="">载入中</option>
 						</select>
+						<label class="error" for="hometown_city" style="display:none;"></label>
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您选择所在城市！
-                    </div>
-					-->
 				</div>
 				
 				<div class="control-group">
@@ -96,12 +69,6 @@
 					<div class="controls">
 						<input name="id_num" class="input-xlarge required" id="form_id_num" type="text" placeholder="">
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请正确填写您的18位身份证号码！
-                    </div>
-					-->
 				</div>
 				
 				<div class="control-group">
@@ -109,12 +76,6 @@
 					<div class="controls">
 						<input name="id_photo" class="input-xlarge required" id="form_id_photo" type="file">
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请选择上传图片文件！
-                    </div>
-					-->
 				</div>
 				
 				<div class="control-group">
@@ -122,12 +83,6 @@
 					<div class="controls">
 						<input name="user_photo" class="input-xlarge required" id="form_user_photo" type="file">
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请选择上传图片文件！
-                    </div>
-					-->
 				</div>
 
                 <legend>受教育经历</legend>
@@ -136,19 +91,13 @@
 					<label class="control-label" for="form_edu_level">学　　历</label>
 					<div class="controls">
 						<select id="form_edu_level" name="edu_level" class="required">
-							<option value=""> -- </option>
+							<option value=""> - </option>
 							<option value="4">大专</option>
 							<option value="5">本科</option>
 							<option value="6">硕士</option>
 							<option value="7">博士及以上</option>
 						</select>
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请选择您的学历！
-                    </div>
-					-->
 				</div>
 				
 				<div class="control-group">
@@ -156,25 +105,13 @@
 					<div class="controls">
 						<input name="edu_photo" class="input-xlarge required" id="form_edu_photo" type="file">
 					</div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请选择上传图片文件！
-                    </div>
-					-->
 				</div>
 
                 <div class="control-group">
-                    <label class="control-label" for="edu_university">毕业院校</label>
+                    <label class="control-label" for="form_edu_university">毕业院校</label>
                     <div class="controls">
-                        <input name="info2_edu_university" class="input-xlarge required" id="edu_university" type="text">
+                        <input name="edu_university" class="input-xlarge required" id="form_edu_university" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请正确填写您的毕业院校！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
@@ -182,12 +119,6 @@
                     <div class="controls">
                         <input name="profession" class="input-xlarge required" id="form_profession" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请正确填写您主修专业！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -204,12 +135,6 @@
                     <div class="controls">
                         <input type="text" class="input-xlarge required" name="work" id="form_work">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -226,12 +151,6 @@
                     <div class="controls">
                         <input name="phone" class="input-xlarge required id="form_phone" type="text" placeholder="">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请正确填写您的联系电话！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
@@ -239,12 +158,6 @@
                     <div class="controls">
                         <input name="email" class="input-xlarge required" id="form_email" type="email">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请正确填写您的E-mail地址！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
@@ -252,31 +165,20 @@
                     <div class="controls">
                         <input name="qq" class="input-xlarge required" id="form_qq" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
                     <label class="control-label" for="form_cur_province">现居住地</label>
                     <div class="controls">
-                        <select id="form_cur_province" name="cur_province required" class="two_select">
-                            <option value="载入中">载入中</option>
+                        <select id="form_cur_province" name="cur_province" class="two_select">
+                            <option value="">载入中</option>
 
                         </select>
-                        <select id="form_cur_city" name="cur_city required" class="two_select">
-                            <option value="载入中">载入中</option>
+                        <select id="form_cur_city" name="cur_city" class="two_select required">
+                            <option value="">载入中</option>
                         </select>
+						<label class="error" for="cur_city" style="display:none;"></label>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您选择现居住地！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
@@ -284,12 +186,6 @@
                     <div class="controls">
                         <input name="cur_addr" class="input-xlarge required" id="form_cur_addr" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
@@ -297,12 +193,6 @@
                     <div class="controls">
                         <input name="post_code" class="input-xlarge required" id="form_post_code" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请正确填写您的该项信息！
-                    </div>
-					-->
                 </div>
 
                 <legend>紧急联系人（直系亲属/家人）</legend>
@@ -312,12 +202,6 @@
                     <div class="controls">
                         <input name="family_title" class="input-xlarge required" id="form_family_title" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -325,12 +209,6 @@
                     <div class="controls">
                         <input name="family_name" class="input-xlarge required" id="form_family_name" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -338,12 +216,6 @@
                     <div class="controls">
                         <input name="family_contact" class="input-xlarge required" id="form_family_contact" type="text" placeholder="">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请正确填写联系人电话！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -351,12 +223,6 @@
                     <div class="controls">
                         <input name="family_workplace" class="input-xlarge required" id="form_family_workplace" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
@@ -364,12 +230,6 @@
                     <div class="controls">
                         <input name="family_addr" class="input-xlarge required" id="form_family_addr" type="text">
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 
                 <legend>支教概况</legend>
@@ -399,13 +259,8 @@
 						  <input type="radio" name="predict_deadline" id="form_term2" value="2">
 						  一学年
 						</label>
+						<label class="error" for="predict_deadline" style="display:none;"></label>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请选择申请支教期限！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -419,20 +274,15 @@
 						  <input type="radio" name="begin_date" id="form_term_spring" value="2">
 						  春季学期
 						</label>
+						<label class="error" for="begin_date" style="display:none;"></label>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请选择开始支教的时间！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
                     <label class="control-label" for="form_status_work">现在的状态</label>
                     <div class="controls">
 						<label class="radio inline">
-						  <input type="radio" name="cur_status" id="form_status_work" value="1" checked>
+						  <input type="radio" name="cur_status" id="form_status_work" value="1">
 						  工作
 						</label>
 						<label class="radio inline">
@@ -443,14 +293,8 @@
 						  <input type="radio" name="cur_status" id="form_status_free" value="3">
 						  无业
 						</label>
-						
+						<label class="error" for="cur_status" style="display:none;"></label>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请选择现在的状态！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -458,12 +302,6 @@
                     <div class="controls">
                         <textarea name="cur_income" class="input-xlarge required" id="form_cur_income" rows="5"></textarea>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -471,12 +309,6 @@
                     <div class="controls">
                         <textarea name="info_from" class="input-xlarge required" id="form_info_from" rows="5"></textarea>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 
                 <legend>支教问答题（100—500字）</legend>
@@ -486,12 +318,6 @@
                     <div>
                         <textarea name="Q1" class="question_text input-xxlarge required" id="form_Q1" rows="5" placeholder="100-500字"></textarea>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 				
                 <div class="control-group">
@@ -499,12 +325,6 @@
                     <div>
                         <textarea name="Q2" class="question_text input-xxlarge required" id="form_Q2" rows="5" placeholder="100-500字"></textarea>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
@@ -512,40 +332,28 @@
                     <div>
                         <textarea name="Q3" class="question_text input-xxlarge required" id="form_Q3" rows="5" placeholder="100-500字"></textarea>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 
                 <div class="control-group">
                     <label class="question_label" for="form_Q4">4、请简述未来五年内的人生规划？</label>
                     <div>
-                        <textarea name="Q4" class="question_text input-xxlarge required" id="form_Q4" rows="5"></textarea>
+                        <textarea name="Q4" class="question_text input-xxlarge required" id="form_Q4" rows="5" placeholder="100-500字"></textarea>
                     </div>
-					<!--
-					<div class="alert">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>提示：</strong> 请您填写该项信息！
-                    </div>
-					-->
                 </div>
 
                 <legend>最终确认</legend>
 
                 <label class="checkbox">
-                    <input id="im-sure" type="checkbox" value="sure" style="width:1em;height:1em;margin-left:2em;margin-right:0.5em;">
+                    <input id="form_confirm" type="checkbox" name="confirm" value="1" style="">
                     我已经准备好了！
+					<!--
 					<span class="input-check" id="im-sure-check">请确认您已经准备好了！</span>
+					-->
+					<label class="error" for="confirm" style="display:none;"></label>
                 </label>
 
                 <div class="form-actions">
-                    <button class="btn btn-primary" type="submit" id="submit_form">提交报名表单</button>
-					<!--
-                    <input type="submit" id="check-submit" style="display:none;"/>
-					-->
+                    <button class="btn btn-large btn-primary" type="submit" id="submit_form">提交报名表单</button>
                 </div>
 				
             </fieldset>
