@@ -172,7 +172,6 @@
                     <div class="controls">
                         <select id="form_cur_province" name="cur_province" class="two_select">
                             <option value="">载入中</option>
-
                         </select>
                         <select id="form_cur_city" name="cur_city" class="two_select required">
                             <option value="">载入中</option>
@@ -346,9 +345,6 @@
                 <label class="checkbox">
                     <input id="form_confirm" type="checkbox" name="confirm" value="1" style="">
                     我已经准备好了！
-					<!--
-					<span class="input-check" id="im-sure-check">请确认您已经准备好了！</span>
-					-->
 					<label class="error" for="confirm" style="display:none;"></label>
                 </label>
 

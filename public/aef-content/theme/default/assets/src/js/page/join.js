@@ -14,8 +14,7 @@
             return false;
         }
 
-        // jquery city select
-        $('#province, #city').citylist({
+		var citydata = {
             data     : [
                 {
                     id : 11, name : '北京', cities : [
@@ -615,8 +614,12 @@
             children : 'cities',
             name     : 'name',
             metaTag  : 'name'
-        });
+        };
+        // jquery city select
+        $('#form_hometown_province, #form_hometown_city').citylist(citydata);
+		$('#form_cur_province, #form_cur_city').citylist(citydata);
 
+		/*
         var submit_now = false;
         var focus_element = null;
 
@@ -782,6 +785,96 @@
                 xmlHttp.send(form);
             }
         }
+		
+		*/
 
+		jQuery.extend(jQuery.validator.messages, {
+			required: "请完善该信息！"
+		});
+		$("#action-form2").validate({
+		    rules: {
+				name: {
+					rangelength: [2, 4]
+				},
+				id_num: {
+					rangelength: [15, 18]
+				},
+				email: {
+					email: true
+				},
+				post_code: {
+					digits: true
+				},
+				begin_date: "required",
+				cur_status: "required",
+				confirm: "required"
+		   },
+		   messages: {
+				name: {
+					required: '请输入你的中文名字（2~4个汉字）！',
+					rangelength: '请输入你的中文名字（2~4个汉字）！'
+				},
+				sex: {
+					required: '请选择您的性别！'
+				},
+				birthday: {
+					required: '请填写真实的出生日期，且年满21周岁！'
+				},
+				married: {
+					required: '请填写您的婚姻状况！'
+				},
+				hometown_city: {
+					required: '请您选择籍贯！'
+				},
+				id_num: {
+					required: '请正确填写您的身份证号码！',
+					rangelength: '请正确填写您的身份证号码！'
+				},
+				id_photo: {
+					required: '请选择上传图片文件！'
+				},
+				user_photo: {
+					required: '请选择上传图片文件！'
+				},
+				edu_level: {
+					required: '请选择您的学历！'
+				},
+				edu_photo: {
+					required: '请选择上传图片文件！'
+				},
+				edu_university: {
+					required: '请正确填写您的毕业院校！'
+				},
+				profession: {
+					required: '请正确填写您主修专业！'
+				},
+				work: {
+					required: '请您填写您的职业！'
+				},
+				phone: {
+					required: '请正确填写您的联系电话！'
+				},
+				email: {
+					required: '请填写您的E-mail地址！',
+					email: '请正确填写您的E-mail地址！',
+				},
+				qq: {
+					required: '请您填写您的QQ或者微信号码！'
+				},
+				cur_city: {
+					required: '请您选择现居住地！'
+				},
+				cur_addr: {
+					required: '请填写您的详细地址！'
+				},
+				post_code: {
+					required: '请填写您的邮政编码！',
+					digits: '请填写您的邮政编码！'
+				},
+				confirm: {
+					required: '请确认您已经准备好了！'
+				}
+			}
+		 });
     });
 })(window, document, window.jQuery);
