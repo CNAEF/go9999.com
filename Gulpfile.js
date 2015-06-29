@@ -45,7 +45,7 @@ gulp.task('scripts:build', function () {
         config.jsSrcDir + 'lib/jquery.smooth-scroll.min.js',
         config.jsSrcDir + 'lib/jquery.city.select.min.js',
 		config.jsSrcDir + 'lib/jquery.validate.min.js',
-		config.jsSrcDir + 'jquery.form.min.js'
+		config.jsSrcDir + 'lib/jquery.form.min.js'
     ])
         .pipe(concat('core.min.js'))
         .pipe(gulpif(!devMode, replace(/^!f/, sign + '\n!f')))

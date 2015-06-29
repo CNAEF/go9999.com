@@ -11,7 +11,7 @@
                 </blockquote>
             </div>
         </div>
-        <form class="form-horizontal " id="action-form2" action="http://apply.go9999.com/join/" method="post">
+        <form class="form-horizontal " id="action-form2" action="http://apply.go9999.com/join/" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>基本资料</legend>
 				
@@ -351,12 +351,31 @@
                 <div class="form-actions">
                     <button class="btn btn-large btn-primary" type="submit" id="submit_form">提交报名表单</button>
                 </div>
-				
             </fieldset>
+
+
 			<!--
-            <table border=1 bordercolor="#787" id="progress_table" style="width:33em;height:1em;margin-top:0.5em;font-size:14px;display:none;"><tr><td id="progress_td" style="width:1%;background:#2a0;"></td><td></td></tr></table>
+            <table border=1 bordercolor="#787" id="progress_table" style="width:33em;height:1em;margin-top:0.5em;font-size:14px;display:none;">
+			<tr>
+			<td id="progress_td" style="width:1%;background:#2a0;"></td>
+			<td></td>
+			</tr>
+			</table>
 			-->
+
         </form>
     </section>
+	
+	<section class="row" id="success" style="display:none;">
+		<div class="page-header">
+            <h1>报名成功！</h1>
+        </div>
+		<div class="span12">
+			<blockquote>
+				<p class="alert alert-success">如果您的资料通过审核，我们会第一时间联系您，请耐心等待，感谢您对支教联盟的支持！</p>
+				<small>支教联盟管理 <cite title="衷心感谢">年小恩</cite></small>
+			</blockquote>
+		</div>
+	</section>
 	
 	
