@@ -711,7 +711,7 @@ var $validator;
 				},
 				email: {
 					required: '请填写您的E-mail地址！',
-					email: '请正确填写您的E-mail地址！',
+					email: '请正确填写您的E-mail地址！'
 				},
 				qq: {
 					required: '请您填写您的QQ或者微信号码！'
