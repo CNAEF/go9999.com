@@ -64,7 +64,7 @@ class RainTPL extends Debug
      *
      * @var array
      */
-    static $path_replace_list = ['a', 'img', 'link', 'script', 'input'];
+    static $path_replace_list = array('a', 'img', 'link', 'script', 'input');
 
 
     /**
@@ -72,7 +72,7 @@ class RainTPL extends Debug
      *
      * @var unknown_type
      */
-    static $black_list = ['\$this', 'raintpl::', 'self::', '_SESSION', '_SERVER', '_ENV', 'eval', 'exec', 'unlink', 'rmdir'];
+    static $black_list = array('\$this', 'raintpl::', 'self::', '_SESSION', '_SERVER', '_ENV', 'eval', 'exec', 'unlink', 'rmdir');
 
 
     /**
@@ -122,13 +122,13 @@ class RainTPL extends Debug
      *
      * @var array
      */
-    public $var = [];
+    public $var = array();
 
-    protected $tpl = [],        // variables to keep the template directories and info
+    protected $tpl = array(),        // variables to keep the template directories and info
         $cache = false,        // static cache enabled / disabled
         $cache_id = null;       // identify only one cache
 
-    protected static $config_name_sum = [];   // takes all the config to create the md5 of the file
+    protected static $config_name_sum = array();   // takes all the config to create the md5 of the file
 
     // -------------------------
 
@@ -325,10 +325,10 @@ class RainTPL extends Debug
 
         //disable php tag
         if (!self::$php_enabled)
-            $template_code = str_replace(["<?", "?>"], ["&lt;?", "?&gt;"], $template_code);
+            $template_code = str_replace(array("<?", "?>"), array("&lt;?", "?&gt;"), $template_code);
 
         //xml re-substitution
-        $template_code = preg_replace_callback("/##XML(.*?)XML##/s", [$this, 'xml_reSubstitution'], $template_code);
+        $template_code = preg_replace_callback("/##XML(.*?)XML##/s", array($this, 'xml_reSubstitution'), $template_code);
 
         //compile template
         $template_compiled = "<?php if(!class_exists('raintpl')){exit;}?>" . $this->compileTemplate($template_code, $tpl_basedir);
@@ -358,7 +358,7 @@ class RainTPL extends Debug
     {
 
         //tag list
-        $tag_regexp = ['loop'          => '(\{loop(?: name){0,1}="\${0,1}[^"]*"\})',
+        $tag_regexp = array('loop'          => '(\{loop(?: name){0,1}="\${0,1}[^"]*"\})',
                        'break'         => '(\{break\})',
                        'loop_close'    => '(\{\/loop\})',
                        'if'            => '(\{if(?: condition){0,1}="[^"]*"\})',
@@ -373,7 +373,7 @@ class RainTPL extends Debug
                        'include'       => '(\{include="[^"]*"(?: cache="[^"]*")?\})',
                        'template_info' => '(\{\$template_info\})',
                        'function'      => '(\{function="(\w*?)(?:.*?)"\})'
-        ];
+        );
 
         $tag_regexp = "/" . join("|", $tag_regexp) . "/";
 
@@ -723,7 +723,7 @@ class RainTPL extends Debug
 
             $url = '(?:(?:\\{.*?\\})?[^{}]*?)*?'; // allow " inside {} for cases in which url contains {function="foo()"}
 
-            $exp = [];
+            $exp = array();
 
             $tags = array_intersect(["link", "a"], self::$path_replace_list);
             $exp[] = '/<(' . join('|', $tags) . ')(.*?)(href)="(' . $url . ')"/i';
@@ -945,8 +945,6 @@ class RainTPL extends Debug
                     $php_var = $php_left_delimiter . (!$is_init_variable && $echo ? 'echo ' : null) . $php_var . $extra_var . $php_right_delimiter;
 
                 $html = str_replace($tag, $php_var, $html);
-
-
             }
         }
 
@@ -1021,7 +1019,6 @@ class RainTPL extends Debug
         return $output;
     }
 }
-
 
 /**
  * Basic Rain tpl exception.
