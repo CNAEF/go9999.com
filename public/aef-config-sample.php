@@ -51,5 +51,5 @@ function __autoload($classname)
 }
 
 /** 输出网站内容 */
-$CNAEF = new App(['THEME' => THEME, 'GZIP' => GZIP, 'DEBUG' => DEBUG]);
+$CNAEF = new App(array('THEME' => THEME, 'GZIP' => GZIP, 'DEBUG' => DEBUG));
 

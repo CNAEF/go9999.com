@@ -14,7 +14,7 @@ if (!defined('FILE_PREFIX')) include "error-forbidden.php";
 
 define('ABSPATH', dirname(__FILE__) . '/');
 
-error_reporting(E_ALL);
+error_reporting(E_ALL ^ E_DEPRECATED ^ E_NOTICE);
 
 if (file_exists(ABSPATH . FILE_PREFIX . 'config.php')) {
 

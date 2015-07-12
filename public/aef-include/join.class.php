@@ -20,16 +20,16 @@ class Join extends Safe
     {
         $params = func_get_args()[0];
 
-        $params['header'] = [
+        $params['header'] = array(
             'pageName' => 'join'
-        ];
+        );
 
-        $params['nav'] = [
+        $params['nav'] = array(
             'showHomeMenu' => true,
             'showJoinMenu' => false
-        ];
+        );
 
-        $params['body'] = [];
+        $params['body'] = array();
         $params['body_file'] = 'join';
 
 

@@ -31,7 +31,7 @@ class Debug extends Safe
      */
     public function theDebug($echo = false)
     {
-        $sysInfo = [];
+        $sysInfo = array();
         $sysInfo = core::associative_push(['DOCUMENT_ROOT' => $_SERVER["DOCUMENT_ROOT"]], $sysInfo);
         $sysInfo = core::associative_push(['REDIRECT_URL' => $_SERVER["REDIRECT_URL"]], $sysInfo);
         $sysInfo = core::associative_push(['SCRIPT_FILENAME' => $_SERVER["SCRIPT_FILENAME"]], $sysInfo);

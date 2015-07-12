@@ -16,7 +16,7 @@ if (!defined('FILE_PREFIX')) include "../error-forbidden.php";
 
 class Template extends RainTPL
 {
-    private $args = [];
+    private $args = array();
     private $process_time_start;
     private $process_time_end;
     protected $tpl = null;
@@ -87,13 +87,9 @@ class Template extends RainTPL
     protected function mktimestamp($end = false)
     {
         if (!$end) {
-
             $this->process_time_start = core::get_mircotime();
-
         } else {
-
             $this->process_time_end = core::get_mircotime();
-
             return number_format($this->process_time_end - $this->process_time_start, 5);
         }
     }

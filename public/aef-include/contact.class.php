@@ -20,23 +20,23 @@ class Contact extends Safe
     {
         $params = func_get_args()[0];
 
-        $params['header'] = [
+        $params['header'] = array(
             'pageName' => 'contact'
-        ];
+        );
 
-        $params['nav'] = [
+        $params['nav'] = array(
             'showHomeMenu' => true,
             'showJoinMenu' => true
-        ];
+        );
 
-        $params['body'] = [];
+        $params['body'] = array();
         $params['body_file'] = 'contact';
 
 
-        $params['footer'] = [
+        $params['footer'] = array(
             'showFriendLinks' => true,
             'currentYear'     => date('Y')
-        ];
+        );
 
         new Template($params);
     }

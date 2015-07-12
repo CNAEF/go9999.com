@@ -94,7 +94,7 @@ class App extends Safe
      */
     public function index()
     {
-        return new Index(['header' => self::get_page_meta('index')]);
+        return new Index(array('header' => self::get_page_meta('index')));
     }
 
     /**
@@ -106,7 +106,7 @@ class App extends Safe
      */
     public function contact()
     {
-        return new Contact(['header' => self::get_page_meta('contact')]);
+        return new Contact(array('header' => self::get_page_meta('contact')));
     }
 
     /**
@@ -118,7 +118,7 @@ class App extends Safe
      */
     public function join()
     {
-        return new Join(['header' => self::get_page_meta('join')]);
+        return new Join(array('header' => self::get_page_meta('join')));
     }
 
     public function hi_cat()

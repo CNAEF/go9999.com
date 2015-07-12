@@ -23,7 +23,7 @@ abstract class Safe extends Core
      */
     protected function validate()
     {
-        $keyword = ["'", ";", "union", " ", "　", "%"];
+        $keyword = array("'", ";", "union", " ", "　", "%");
         $redirect = "";
         function is_exist($score, $keyword)
         {

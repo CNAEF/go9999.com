@@ -20,16 +20,16 @@ class Index extends Safe
     {
         $params = func_get_args()[0];
 
-        $params['header'] = [
+        $params['header'] = array(
             'pageName' => 'home'
-        ];
+        );
 
-        $params['nav'] = [
+        $params['nav'] = array(
             'showHomeMenu' => false,
             'showJoinMenu' => true
-        ];
+        );
 
-        $params['body'] = [];
+        $params['body'] = array();
 
         // 每年10月开始下一年度志愿者招募
         if (date('m') > 10) {
@@ -39,10 +39,10 @@ class Index extends Safe
         }
         $params['body']['subTitleYear'] = $subTitleYear;
 
-        $params['footer'] = [
+        $params['footer'] = array(
             'showFriendLinks' => true,
             'currentYear'     => date('Y')
-        ];
+        );
 
         new Template($params);
     }
