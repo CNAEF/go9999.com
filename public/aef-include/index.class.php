@@ -20,15 +20,11 @@ class Index extends Safe
     {
         $params = func_get_args()[0];
 
-        $params['header'] = array(
-            'pageName' => 'home'
-        );
-
+        $params['header']['pageName'] = 'home';
         $params['nav'] = array(
             'showHomeMenu' => false,
             'showJoinMenu' => true
         );
-
         $params['body'] = array();
 
         // 每年10月开始下一年度志愿者招募

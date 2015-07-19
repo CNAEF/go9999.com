@@ -29,7 +29,6 @@ class Template extends RainTPL
         }
 
         $params = func_get_args()[0];
-
         $this->initTemplate();
         ob_start();
 

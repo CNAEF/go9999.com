@@ -20,9 +20,7 @@ class Contact extends Safe
     {
         $params = func_get_args()[0];
 
-        $params['header'] = array(
-            'pageName' => 'contact'
-        );
+        $params['header']['pageName'] = 'contact';
 
         $params['nav'] = array(
             'showHomeMenu' => true,
