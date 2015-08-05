@@ -52,8 +52,8 @@
     </p>
 </footer>
 </div>
-<script type="text/javascript" src="{$assets}js/core.min.js?20150620"></script>
-<script type="text/javascript" src="{$assets}js/app.min.js?20150620"></script>
+<script type="text/javascript" src="{$assets}js/core.min.js?20150806"></script>
+<script type="text/javascript" src="{$assets}js/app.min.js?20150806"></script>
 <script type="text/html" id="common-modal-tpl">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
