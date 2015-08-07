@@ -644,7 +644,13 @@ var $validator;
 					},
 					error: function (data) {
 						alert('抱歉，系统出了一点儿小问题，请稍后重试！');
-					}
+					},
+                    beforeSend: function () {
+                        $('#submit_form').attr('disabled', true);
+                    },
+                    complete: function () {
+                        $('#submit_form').attr('disabled', false);
+                    }
 				});
 			},
 		    rules: {
@@ -662,7 +668,23 @@ var $validator;
 				},
 				begin_date: "required",
 				cur_status: "required",
-				confirm: "required"
+				confirm: "required",
+                Q1: {
+                    required: true,
+                    rangelength: [100, 500]
+                },
+                Q2: {
+                    required: true,
+                    rangelength: [100, 500]
+                },
+                Q3: {
+                    required: true,
+                    rangelength: [100, 500]
+                },
+                Q4: {
+                    required: true,
+                    rangelength: [100, 500]
+                },
 		   },
 		   messages: {
 				name: {
@@ -728,7 +750,23 @@ var $validator;
 				},
 				confirm: {
 					required: '请确认您已经准备好了！'
-				}
+				},
+               Q1: {
+                   required: '请填写该内容！',
+                   rangelength: '请输入100-500字'
+               },
+               Q2: {
+                   required: '请填写该内容！',
+                   rangelength: '请输入100-500字'
+               },
+               Q3: {
+                   required: '请填写该内容！',
+                   rangelength: '请输入100-500字'
+               },
+               Q4: {
+                   required: '请填写该内容！',
+                   rangelength: '请输入100-500字'
+               }
 			}
 		 });
     });
