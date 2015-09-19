@@ -79,7 +79,7 @@
         // 微信弹窗
         var showWeiXin = function () {
             var weixinBox = '#weixin-box';
-            var modalTPL = '<div class="modal hide fade" id="weixin-box"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3>联盟微信公众平台账号：CNAEF2006</h3></div><div class="modal-body"><p><img style="width: 60%;display: block;margin: 0 auto;" src="/extra/img/weixin.jpg" alt="联盟微信公众平台账号：CNAEF2006"/></p></div><div class="modal-footer"><a href="#" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">关闭</a></div></div>';
+            var modalTPL = '<div class="modal hide fade" id="weixin-box"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3>联盟微信公众平台账号：CNAEF2006</h3></div><div class="modal-body"><p><img style="width: 60%;display: block;margin: 0 auto;" src="/assets/img/weixin.jpg" alt="联盟微信公众平台账号：CNAEF2006"/></p></div><div class="modal-footer"><a href="#" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">关闭</a></div></div>';
             $(weixinBox).remove();
             $('body').append(modalTPL);
             $(weixinBox).modal('show');
