@@ -33,6 +33,11 @@ define('C_SITE_NAME', '中国·支教联盟');
 /** 静态资源地址 */
 define('C_ASSETS_PREFIX', '//www.go9999.com/assets/');
 
+/** 数据库配置 */
+if (file_exists(FILE_PREFIX . "db.php")) {
+    include(FILE_PREFIX . "db.php");
+}
+
 /** 载入程序模块 */
 function __autoload($classname)
 {

@@ -47,6 +47,10 @@ class App extends Safe
         route::register('/baoming\?.*', 'join', true);
         route::register('/baoming/\?.*', 'join', true);
 
+        route::register('/progress', 'progress');
+        route::register('/progress\?.*', 'progress', true);
+        route::register('/progress/\?.*', 'progress', true);
+
         route::register('/about', 'about');
         route::register('/about\?.*', 'about', true);
         route::register('/about/\?.*', 'about', true);
@@ -138,12 +142,20 @@ class App extends Safe
         include ABSPATH . FILE_PREFIX . "404.php";
     }
 
+    // 审核进度
+    public function progress()
+    {
+        return new Progress(array('header' => self::get_page_meta('progress')));
+        //echo 'progress';
+    }
+
+    // 关于我们
     public function about()
     {
         echo 'about';
-
     }
 
+    // 合作伙伴
     public function links()
     {
         echo 'links';

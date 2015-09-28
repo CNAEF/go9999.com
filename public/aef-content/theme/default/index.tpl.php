@@ -29,11 +29,9 @@
                     <a class="btn btn-primary btn-mini" href="http://page.renren.com/601714744">公共主页</a>
                     <a class="btn btn-primary btn-mini"
                        href="http://tieba.baidu.com/f?kw=%D6%D0%B9%FA%D6%A7%BD%CC%C1%AA%C3%CB">百度贴吧</a>
-
                     <a class="btn btn-primary btn-mini" href="http://e.weibo.com/go9999">新浪微博</a>
                     <a class="btn btn-primary btn-mini" href="http://blog.sina.com.cn/mobile1771918357">新浪博客</a>
                 </p>
-
                 <div style="clear:both"></div>
             </div>
         </div>
@@ -247,7 +245,8 @@
         <h1>加入我们</h1>
     </div>
     <p>欢迎有志之士加入联盟大家庭！</p>
-    <a class="btn btn-primary btn-large" href="http://www.go9999.com/join/">我要报名参加</a>
+    <p><a class="btn btn-primary btn-large" href="http://www.go9999.com/join/">我要报名参加</a></p>
+    <p><a href="http://www.go9999.com/progress/">查看申请进度</a></p>
 
     <div class="page-header">
         <h1 id="our-album">支教掠影</h1>
