@@ -20,7 +20,7 @@ class Progress extends Safe
     {
         $DB = new MySql(array('MODE' => 'WRITE' , 'DEBUG' => DEBUG));
 
-        $sql = "select name,user_status,verify_time,verify_status,time from user_info where time>'".date('Y-m-d H:i:s', time()-(86400*365))."' order by id desc limit 1000";
+        $sql = "select name,user_status,verify_time,verify_status,time from user_info where time>'".date('Y-m-d H:i:s', time()-(86400*180))."' order by id desc limit 1000";
         $query = $DB->query($sql);
 
         $records = [];

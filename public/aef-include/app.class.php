@@ -152,13 +152,29 @@ class App extends Safe
     // 关于我们
     public function about()
     {
-        echo 'about';
+        $this->page404();
+        //echo 'about';
     }
 
     // 合作伙伴
     public function links()
     {
-        echo 'links';
+        $this->page404();
+        //echo 'links';
+    }
+
+    // 志愿者清单
+    public function history()
+    {
+        $this->page404();
+        //echo 'list';
+    }
+
+    // 代码贡献者清单
+    public function support()
+    {
+        $this->page404();
+        //echo 'support';
     }
 
     /**

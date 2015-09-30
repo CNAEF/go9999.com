@@ -15,12 +15,10 @@
                 <a href="http://www.go9999.com">
                     <span style="font-size: 24px;display: block; font-weight: bold; margin-bottom: 1em;">梦想，触手可及。</span>
                 </a>
-
                 <p><span class="label"
                          style="text-shadow: 0 -1px 0 rgba(27, 146, 255, 0.25);background-color: #37B4FA;">您可以通过下面的方式关注我们</span>
                     <a class="btn btn-mini pull-right" href="#CMD:WEIXIN" id="show-weixin">微信</a>
                 </p>
-
                 <p class="contact-btns">
                     <a class="btn btn-primary btn-mini" href="http://www.go9999.com">官方网站</a>
                     <a class="btn btn-primary btn-mini" href="http://site.douban.com/118628/">豆瓣小站</a>
